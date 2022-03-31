@@ -225,7 +225,7 @@ var avoidance_key = "C";
     case "approach_morality_neg":
       approach_pos_2 = "avoidance";
       approach_neg_2 = "approach";
-      stim_to_approach_2 = "negative words related to orality";
+      stim_to_approach_2 = "negative words related to morality";
       stim_to_avoid_2 = "positive words related to morality";
       break;
   }
