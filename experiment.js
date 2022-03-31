@@ -1151,9 +1151,7 @@ var avoidance_key = "C";
   // Initialize timeline ------------------------------------------------------------------
   var timeline = [];
 
-  welcome
-  timeline.push(welcome,
-                consent,
+  timeline.push(consent,
                 if_not_enough_time);
 
   // prolific verification
