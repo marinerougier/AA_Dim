@@ -603,7 +603,7 @@ var avoidance_key = "C";
       "<p class='instructions'>At the beginning of each trial, you will see the 'O' symbol. This symbol " +
       "indicates that you have to press the <b>START key</b> (namely the <b>D key</b>) to start the trial.</p>" +
       "<p class='instructions'>Then, you will see a fixation cross (+) at the center of the screen, followed " +
-      "by a word or an image.</p>" +
+      "by a word.</p>" +
       "<p class='instructions'>Your task is to move forward or backward by pressing the <b>MOVE FORWARD</b> " +
       "(the <b>E key</b>) or the <b>MOVE BACKWARD</b> (the <b>C key</b>) key <strong>as fast as possible</strong>.</p>" +
       "<p class='instructions'>For all of these actions, please only use the index of your dominant hand.</p>" +
@@ -618,8 +618,8 @@ var avoidance_key = "C";
         "<p class='instructions'><center><strong>INSTRUCTION FOR THIS FIRST SECTION</strong></center></p>" +
         "<p class='instructions'>In this section, you have to:</p>" +
          "<ul class='instructions'>" +
-          "<li><strong>APPROACH " + stim_to_approach_1 + " by pressing the MOVE FORWARD key <br>(i.e., the " + approach_key + " key)</strong></li>" +
-          "<li><strong>AVOID " + stim_to_avoid_1 + " by pressing the MOVE BACKWARD key <br>(i.e., the " + avoidance_key + " key)</strong></li>" +
+          "<li><strong>APPROACH " + stim_to_approach_1 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
+          "<li><strong>AVOID " + stim_to_avoid_1 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
          "</ul>" +
         "<p class='instructions'>You will start with a training phase.</p>" +
         "<p class='instructions'><u>WARNING:</u> we will report your errors ONLY during the training phase, so " +
@@ -636,8 +636,8 @@ var avoidance_key = "C";
         "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
         "<p class='instructions'>As a reminder, you have to:</p>" +
          "<ul class='instructions'>" +
-          "<li><strong>APPROACH " + stim_to_approach_1 + " by pressing the MOVE FORWARD key <br>(i.e., the " + approach_key + " key)</strong></li>" +
-          "<li><strong>AVOID " + stim_to_avoid_1 + " by pressing the MOVE BACKWARD key <br>(i.e., the " + avoidance_key + " key)</strong></li>" +
+          "<li><strong>APPROACH " + stim_to_approach_1 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
+          "<li><strong>AVOID " + stim_to_avoid_1 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
          "</ul>" +
         "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
     choices: [32]
@@ -650,8 +650,8 @@ var avoidance_key = "C";
       "<p class='instructions'><center><strong>INSTRUCTION FOR THIS SECOND SECTION</strong></center></p>" +
       "<p class='instructions'>In this section, you have to:</p>" +
        "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_2 + " by pressing the MOVE FORWARD key <br>(i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_2 + " by pressing the MOVE BACKWARD key <br>(i.e., the " + avoidance_key + " key)</strong></li>" +
+        "<li><strong>APPROACH " + stim_to_approach_2 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
+        "<li><strong>AVOID " + stim_to_avoid_2 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
        "</ul>" +
       "<p class='instructions'>You will start with a training phase.</p>" +
       "<p class='instructions'><u>WARNING:</u> we will report your errors ONLY during the training phase, so " +
@@ -668,8 +668,8 @@ var avoidance_key = "C";
         "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
         "<p class='instructions'>As a reminder, you have to:</p>" +
          "<ul class='instructions'>" +
-          "<li><strong>APPROACH " + stim_to_approach_2 + " by pressing the MOVE FORWARD key <br>(i.e., the " + approach_key + " key)</strong></li>" +
-          "<li><strong>AVOID " + stim_to_avoid_2 + " by pressing the MOVE BACKWARD key <br>(i.e., the " + avoidance_key + " key)</strong></li>" +
+          "<li><strong>APPROACH " + stim_to_approach_2 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
+          "<li><strong>AVOID " + stim_to_avoid_2 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
          "</ul>" +
         "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
     choices: [32]
@@ -682,8 +682,8 @@ var avoidance_key = "C";
       "<p class='instructions'><center><strong>INSTRUCTION FOR THIS FIRST SECTION</strong></center></p>" +
       "<p class='instructions'>In this section, you have to:</p>" +
        "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_3 + " by pressing the MOVE FORWARD key <br>(i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_3 + " by pressing the MOVE BACKWARD key <br>(i.e., the " + avoidance_key + " key)</strong></li>" +
+        "<li><strong>APPROACH " + stim_to_approach_3 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
+        "<li><strong>AVOID " + stim_to_avoid_3 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
        "</ul>" +
       "<p class='instructions'>You will start with a training phase.</p>" +
       "<p class='instructions'><u>WARNING:</u> we will report your errors ONLY during the training phase, so " +
@@ -700,8 +700,8 @@ var avoidance_key = "C";
       "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
       "<p class='instructions'>As a reminder, you have to:</p>" +
        "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_3 + " by pressing the MOVE FORWARD key <br>(i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_3 + " by pressing the MOVE BACKWARD key <br>(i.e., the " + avoidance_key + " key)</strong></li>" +
+        "<li><strong>APPROACH " + stim_to_approach_3 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
+        "<li><strong>AVOID " + stim_to_avoid_3 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
        "</ul>" +
       "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
   choices: [32]
@@ -714,8 +714,8 @@ var avoidance_key = "C";
       "<p class='instructions'><center><strong>INSTRUCTION FOR THIS SECOND SECTION</strong></center></p>" +
       "<p class='instructions'>In this section, you have to:</p>" +
        "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_4 + " by pressing the MOVE FORWARD key <br>(i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_4 + " by pressing the MOVE BACKWARD key <br>(i.e., the " + avoidance_key + " key)</strong></li>" +
+        "<li><strong>APPROACH " + stim_to_approach_4 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
+        "<li><strong>AVOID " + stim_to_avoid_4 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
        "</ul>" +
       "<p class='instructions'>You will start with a training phase.</p>" +
       "<p class='instructions'><u>WARNING:</u> we will report your errors ONLY during the training phase, so " +
@@ -732,8 +732,8 @@ var avoidance_key = "C";
       "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
       "<p class='instructions'>As a reminder, you have to:</p>" +
        "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_4 + " by pressing the MOVE FORWARD key <br>(i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_4 + " by pressing the MOVE BACKWARD key <br>(i.e., the " + avoidance_key + " key)</strong></li>" +
+        "<li><strong>APPROACH " + stim_to_approach_4 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
+        "<li><strong>AVOID " + stim_to_avoid_4 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
        "</ul>" +
       "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
   choices: [32]
