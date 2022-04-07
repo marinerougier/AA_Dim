@@ -716,8 +716,8 @@ var avoidance_key = "C";
       "indicates that you have to press the <b>START key</b> (namely the <b>D key</b>) to start the trial.</p>" +
       "<p class='instructions'>Then, you will see a fixation cross (+) at the center of the screen, followed " +
       "by a word.</p>" +
-      "<p class='instructions'>Your task is to move forward or backward by pressing the <b>MOVE FORWARD</b> " +
-      "(the <b>E key</b>) or the <b>MOVE BACKWARD</b> (the <b>C key</b>) key <strong>as fast as possible</strong>.</p>" +
+      "<p class='instructions'>Your task is to move forward or backward by pressing the <b>'move forward'</b> " +
+      "(the <b>E key</b>) or the <b>'move backward'</b> (the <b>C key</b>) key <strong>as fast as possible</strong>.</p>" +
       "<p class='instructions'>For all of these actions, please only use the index of your dominant hand.</p>" +
       "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
     choices: [32]
