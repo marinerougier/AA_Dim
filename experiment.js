@@ -671,7 +671,7 @@ var avoidance_key = "C";
     "In this study, you will engage in a categorization task named the 'Video Game task'. " +
     "This task is divided into four blocks.</p>" +
     "<p class='instructions'>In two blocks you will categorize positive and negative words related "+
-    "to sociability (e.g., 'sociable' vs. 'associable') and in the two other blocks "+
+    "to sociability (e.g., 'sociable' vs. 'associable') and in the other two blocks "+
     "you will categorize positive and negative words related to morality "+
     "(e.g., 'moral' vs. 'immoral'). </p>" +
     "<p class = 'continue-instructions'>Press <strong>space</strong> to start.</p>",
@@ -719,7 +719,7 @@ var avoidance_key = "C";
       "<p class='instructions'>Your task is to move forward or backward by pressing the <b>MOVE FORWARD</b> " +
       "(the <b>E key</b>) or the <b>MOVE BACKWARD</b> (the <b>C key</b>) key <strong>as fast as possible</strong>.</p>" +
       "<p class='instructions'>For all of these actions, please only use the index of your dominant hand.</p>" +
-      "<p class='continue-instructions'>Press <strong>space</strong> to start Block 1.</p>",
+      "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
     choices: [32]
   };
 
@@ -730,8 +730,8 @@ var avoidance_key = "C";
         "<p class='instructions'><center><strong>INSTRUCTION FOR THIS FIRST BLOCK</strong></center></p>" +
         "<p class='instructions'>In this block, you have to:</p>" +
          "<ul class='instructions'>" +
-          "<li><strong>APPROACH " + stim_to_approach_1 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
-          "<li><strong>AVOID " + stim_to_avoid_1 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
+          "<li><strong>APPROACH " + stim_to_approach_1 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
+          "<li><strong>AVOID " + stim_to_avoid_1 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
          "</ul>" +
         "<p class='instructions'>You will start with a training phase.</p>" +
         "<p class='instructions'><u>WARNING:</u> we will report your errors ONLY during the training phase, so " +
@@ -748,8 +748,8 @@ var avoidance_key = "C";
         "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
         "<p class='instructions'>As a reminder, you have to:</p>" +
          "<ul class='instructions'>" +
-          "<li><strong>APPROACH " + stim_to_approach_1 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
-          "<li><strong>AVOID " + stim_to_avoid_1 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
+          "<li><strong>APPROACH " + stim_to_approach_1 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
+          "<li><strong>AVOID " + stim_to_avoid_1 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
          "</ul>" +
         "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
     choices: [32]
@@ -762,8 +762,8 @@ var avoidance_key = "C";
       "<p class='instructions'><center><strong>INSTRUCTION FOR THIS SECOND BLOCK</strong></center></p>" +
       "<p class='instructions'>In this block, you have to:</p>" +
        "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_2 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_2 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
+        "<li><strong>APPROACH " + stim_to_approach_2 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
+        "<li><strong>AVOID " + stim_to_avoid_2 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
        "</ul>" +
       "<p class='instructions'>You will start with a training phase.</p>" +
       "<p class='instructions'><u>WARNING:</u> we will report your errors ONLY during the training phase, so " +
@@ -780,8 +780,8 @@ var avoidance_key = "C";
         "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
         "<p class='instructions'>As a reminder, you have to:</p>" +
          "<ul class='instructions'>" +
-          "<li><strong>APPROACH " + stim_to_approach_2 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
-          "<li><strong>AVOID " + stim_to_avoid_2 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
+          "<li><strong>APPROACH " + stim_to_approach_2 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
+          "<li><strong>AVOID " + stim_to_avoid_2 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
          "</ul>" +
         "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
     choices: [32]
@@ -794,8 +794,8 @@ var avoidance_key = "C";
       "<p class='instructions'><center><strong>INSTRUCTION FOR THIS THIRD BLOCK</strong></center></p>" +
       "<p class='instructions'>In this block, you have to:</p>" +
        "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_3 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_3 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
+        "<li><strong>APPROACH " + stim_to_approach_3 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
+        "<li><strong>AVOID " + stim_to_avoid_3 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
        "</ul>" +
       "<p class='instructions'>You will start with a training phase.</p>" +
       "<p class='instructions'><u>WARNING:</u> we will report your errors ONLY during the training phase, so " +
@@ -812,8 +812,8 @@ var avoidance_key = "C";
       "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
       "<p class='instructions'>As a reminder, you have to:</p>" +
        "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_3 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_3 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
+        "<li><strong>APPROACH " + stim_to_approach_3 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
+        "<li><strong>AVOID " + stim_to_avoid_3 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
        "</ul>" +
       "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
   choices: [32]
@@ -826,8 +826,8 @@ var avoidance_key = "C";
       "<p class='instructions'><center><strong>INSTRUCTION FOR THIS LAST BLOCK</strong></center></p>" +
       "<p class='instructions'>In this block, you have to:</p>" +
        "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_4 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_4 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
+        "<li><strong>APPROACH " + stim_to_approach_4 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
+        "<li><strong>AVOID " + stim_to_avoid_4 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
        "</ul>" +
       "<p class='instructions'>You will start with a training phase.</p>" +
       "<p class='instructions'><u>WARNING:</u> we will report your errors ONLY during the training phase, so " +
@@ -844,8 +844,8 @@ var avoidance_key = "C";
       "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
       "<p class='instructions'>As a reminder, you have to:</p>" +
        "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_4 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_4 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
+        "<li><strong>APPROACH " + stim_to_approach_4 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
+        "<li><strong>AVOID " + stim_to_avoid_4 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
        "</ul>" +
       "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
   choices: [32]
