@@ -174,29 +174,29 @@ var avoidance_key = "C";
     case "approach_sociability_pos":
       approach_pos_1 = "approach";
       approach_neg_1 = "avoidance";
-      stim_to_approach_1 = "positive words related to sociability";
-      stim_to_avoid_1 = "negative words related to sociability";
+      stim_to_approach_1 = "POSITIVE words related to SOCIABILITY";
+      stim_to_avoid_1 = "NEGATIVE words related to SOCIABILITY";
       break;
 
     case "approach_sociability_neg":
       approach_pos_1 = "avoidance";
       approach_neg_1 = "approach";
-      stim_to_approach_1 = "negative words related to sociability";
-      stim_to_avoid_1 = "positive words related to sociability";
+      stim_to_approach_1 = "NEGATIVE words related to SOCIABILITY";
+      stim_to_avoid_1 = "POSITIVE words related to SOCIABILITY";
       break;
 
     case "approach_morality_pos":
       approach_pos_1 = "approach";
       approach_neg_1 = "avoidance";
-      stim_to_approach_1 = "positive words related to morality";
-      stim_to_avoid_1 = "negative words related to morality";
+      stim_to_approach_1 = "POSITIVE words related to MORALITY";
+      stim_to_avoid_1 = "NEGATIVE words related to MORALITY";
       break;
 
     case "approach_morality_neg":
       approach_pos_1 = "avoidance";
       approach_neg_1 = "approach";
-      stim_to_approach_1 = "negative words related to morality";
-      stim_to_avoid_1 = "positive words related to morality";
+      stim_to_approach_1 = "NEGATIVE words related to MORALITY";
+      stim_to_avoid_1 = "POSITIVE words related to MORALITY";
       break;
   }
 
@@ -204,29 +204,29 @@ var avoidance_key = "C";
     case "approach_sociability_pos":
       approach_pos_2 = "approach";
       approach_neg_2 = "avoidance";
-      stim_to_approach_2 = "positive words related to ociability";
-      stim_to_avoid_2 = "negative words related to sociability";
+      stim_to_approach_2 = "POSITIVE words related to SOCIABILITY";
+      stim_to_avoid_2 = "NEGATIVE words related to SOCIABILITY";
       break;
 
     case "approach_sociability_neg":
       approach_pos_2 = "avoidance";
       approach_neg_2 = "approach";
-      stim_to_approach_2 = "negative words related to sociability";
-      stim_to_avoid_2 = "positive words related to ociability";
+      stim_to_approach_2 = "NEGATIVE words related to SOCIABILITY";
+      stim_to_avoid_2 = "POSITIVE words related to SOCIABILITY";
       break;
 
     case "approach_morality_pos":
       approach_pos_2 = "approach";
       approach_neg_2 = "avoidance";
-      stim_to_approach_2 = "positive words related to morality";
-      stim_to_avoid_2 = "negative words related to morality";
+      stim_to_approach_2 = "POSITIVE words related to MORALITY";
+      stim_to_avoid_2 = "NEGATIVE words related to MORALITY";
       break;
 
     case "approach_morality_neg":
       approach_pos_2 = "avoidance";
       approach_neg_2 = "approach";
-      stim_to_approach_2 = "negative words related to morality";
-      stim_to_avoid_2 = "positive words related to morality";
+      stim_to_approach_2 = "NEGATIVE words related to MORALITY";
+      stim_to_avoid_2 = "POSITIVE words related to MORALITY";
       break;
   }
 
@@ -234,29 +234,29 @@ var avoidance_key = "C";
     case "approach_sociability_pos":
       approach_pos_3 = "approach";
       approach_neg_3 = "avoidance";
-      stim_to_approach_3 = "positive words related to sociability";
-      stim_to_avoid_3 = "negative words related to sociability";
+      stim_to_approach_3 = "POSITIVE words related to SOCIABILITY";
+      stim_to_avoid_3 = "NEGATIVE words related to SOCIABILITY";
       break;
 
     case "approach_sociability_neg":
       approach_pos_3 = "avoidance";
       approach_neg_3 = "approach";
-      stim_to_approach_3 = "negative words related to sociability";
-      stim_to_avoid_3 = "positive words related to sociability";
+      stim_to_approach_3 = "NEGATIVE words related to SOCIABILITY";
+      stim_to_avoid_3 = "POSITIVE words related to SOCIABILITY";
       break;
 
     case "approach_morality_pos":
       approach_pos_3 = "approach";
       approach_neg_3 = "avoidance";
-      stim_to_approach_3 = "positive words related to morality";
-      stim_to_avoid_3 = "negative words related to morality";
+      stim_to_approach_3 = "POSITIVE words related to MORALITY";
+      stim_to_avoid_3 = "NEGATIVE words related to MORALITY";
       break;
 
     case "approach_morality_neg":
       approach_pos_3 = "avoidance";
       approach_neg_3 = "approach";
-      stim_to_approach_3 = "negative words related to morality";
-      stim_to_avoid_3 = "positive words related to morality";
+      stim_to_approach_3 = "NEGATIVE words related to MORALITY";
+      stim_to_avoid_3 = "POSITIVE words related to MORALITY";
       break;
   }
 
@@ -264,29 +264,29 @@ var avoidance_key = "C";
     case "approach_sociability_pos":
       approach_pos_4 = "approach";
       approach_neg_4 = "avoidance";
-      stim_to_approach_4 = "positive words related to sociability";
-      stim_to_avoid_4 = "negative words related to sociability";
+      stim_to_approach_4 = "POSITIVE words related to SOCIABILITY";
+      stim_to_avoid_4 = "NEGATIVE words related to SOCIABILITY";
       break;
 
     case "approach_sociability_neg":
       approach_pos_4 = "avoidance";
       approach_neg_4 = "approach";
-      stim_to_approach_4 = "negative words related to sociability";
-      stim_to_avoid_4 = "positive words related to sociability";
+      stim_to_approach_4 = "NEGATIVE words related to SOCIABILITY";
+      stim_to_avoid_4 = "POSITIVE words related to SOCIABILITY";
       break;
 
     case "approach_morality_pos":
       approach_pos_4 = "approach";
       approach_neg_4 = "avoidance";
-      stim_to_approach_4 = "positive words related to morality";
-      stim_to_avoid_4 = "negative words related to morality";
+      stim_to_approach_4 = "POSITIVE words related to MORALITY";
+      stim_to_avoid_4 = "NEGATIVE words related to MORALITY";
       break;
 
     case "approach_morality_neg":
       approach_pos_4 = "avoidance";
       approach_neg_4 = "approach";
-      stim_to_approach_4 = "negative words related to morality";
-      stim_to_avoid_4 = "positive words related to morality";
+      stim_to_approach_4 = "NEGATIVE words related to MORALITY";
+      stim_to_avoid_4 = "POSITIVE words related to MORALITY";
       break;
   }
 
@@ -556,11 +556,11 @@ var avoidance_key = "C";
     type: "html-keyboard-response",
     stimulus: "<p class='instructions'>You are now about to start the study. "+
     "<br><br>"+
-    "In this study, you will engage in two categorization tasks (Task 1 and Task 2). " +
-    "Each of these two tasks is divided into two sections (first section and second section).</p>" +
-    "<p class='instructions'>In one task you will categorize positive and negative words related "+
-    "to sociability (e.g., 'sociable' vs. 'associable') and in the other "+
-    "task you will categorize positive and negative words related to morality "+
+    "In this study, you will engage in a categorization task named the 'Video Game task'. " +
+    "This task is divided into four blocks.</p>" +
+    "<p class='instructions'>In two blocks you will categorize positive and negative words related "+
+    "to sociability (e.g., 'sociable' vs. 'associable') and in the two other blocks "+
+    "you will categorize positive and negative words related to morality "+
     "(e.g., 'moral' vs. 'immoral'). </p>" +
     "<p class = 'continue-instructions'>Press <strong>space</strong> to start.</p>",
     choices: [32]
@@ -572,7 +572,7 @@ var avoidance_key = "C";
     type: "html-keyboard-response",
     stimulus:
       "<h1 class ='custom-title'>Video Game Task</h1>" +
-      "<p class='instructions'>In these two tasks, like in a video game, you will see an environment " +
+      "<p class='instructions'>In this task, like in a video game, you will see an environment " +
       "(presented below) in which you will be able to move forward or backward.</p>" +
       "<p class='instructions'><center>" +
         "<img src = 'media/vaast-background.png'>" +
@@ -607,16 +607,16 @@ var avoidance_key = "C";
       "<p class='instructions'>Your task is to move forward or backward by pressing the <b>MOVE FORWARD</b> " +
       "(the <b>E key</b>) or the <b>MOVE BACKWARD</b> (the <b>C key</b>) key <strong>as fast as possible</strong>.</p>" +
       "<p class='instructions'>For all of these actions, please only use the index of your dominant hand.</p>" +
-      "<p class='continue-instructions'>Press <strong>space</strong> to start Task 1.</p>",
+      "<p class='continue-instructions'>Press <strong>space</strong> to start Block 1.</p>",
     choices: [32]
   };
 
   var vaast_instructions_training_block_1 = {
       type : "html-keyboard-response",
       stimulus:
-        "<h1 class ='custom-title'>Video Game Task: Task 1</h1>" +
-        "<p class='instructions'><center><strong>INSTRUCTION FOR THIS FIRST SECTION</strong></center></p>" +
-        "<p class='instructions'>In this section, you have to:</p>" +
+        "<h1 class ='custom-title'>Video Game Task: Block 1/4</h1>" +
+        "<p class='instructions'><center><strong>INSTRUCTION FOR THIS FIRST BLOCK</strong></center></p>" +
+        "<p class='instructions'>In this block, you have to:</p>" +
          "<ul class='instructions'>" +
           "<li><strong>APPROACH " + stim_to_approach_1 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
           "<li><strong>AVOID " + stim_to_avoid_1 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
@@ -631,7 +631,7 @@ var avoidance_key = "C";
   var vaast_instructions_test_block_1 = {
       type: "html-keyboard-response",
       stimulus:
-        "<h1 class ='custom-title'>Video Game Task: Task 1</h1>" +
+        "<h1 class ='custom-title'>Video Game Task: Block 1/4</h1>" +
         "<p class='instructions'>The training phase is now over.</p>" +
         "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
         "<p class='instructions'>As a reminder, you have to:</p>" +
@@ -646,9 +646,9 @@ var avoidance_key = "C";
   var vaast_instructions_training_block_2 = {
     type : "html-keyboard-response",
     stimulus:
-      "<h1 class ='custom-title'>Video Game Task: Task 1</h1>" +
-      "<p class='instructions'><center><strong>INSTRUCTION FOR THIS SECOND SECTION</strong></center></p>" +
-      "<p class='instructions'>In this section, you have to:</p>" +
+      "<h1 class ='custom-title'>Video Game Task: Block 2/4</h1>" +
+      "<p class='instructions'><center><strong>INSTRUCTION FOR THIS SECOND BLOCK</strong></center></p>" +
+      "<p class='instructions'>In this block, you have to:</p>" +
        "<ul class='instructions'>" +
         "<li><strong>APPROACH " + stim_to_approach_2 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
         "<li><strong>AVOID " + stim_to_avoid_2 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
@@ -663,7 +663,7 @@ var avoidance_key = "C";
   var vaast_instructions_test_block_2 = {
       type: "html-keyboard-response",
       stimulus:
-        "<h1 class ='custom-title'>Video Game Task: Task 1</h1>" +
+        "<h1 class ='custom-title'>Video Game Task: Block 2/4</h1>" +
         "<p class='instructions'>The training phase is now over.</p>" +
         "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
         "<p class='instructions'>As a reminder, you have to:</p>" +
@@ -678,9 +678,9 @@ var avoidance_key = "C";
   var vaast_instructions_training_block_3 = {
     type : "html-keyboard-response",
     stimulus:
-      "<h1 class ='custom-title'>Video Game Task: Task 2</h1>" +
-      "<p class='instructions'><center><strong>INSTRUCTION FOR THIS FIRST SECTION</strong></center></p>" +
-      "<p class='instructions'>In this section, you have to:</p>" +
+      "<h1 class ='custom-title'>Video Game Task: Block 3/4</h1>" +
+      "<p class='instructions'><center><strong>INSTRUCTION FOR THIS THIRD BLOCK</strong></center></p>" +
+      "<p class='instructions'>In this block, you have to:</p>" +
        "<ul class='instructions'>" +
         "<li><strong>APPROACH " + stim_to_approach_3 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
         "<li><strong>AVOID " + stim_to_avoid_3 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
@@ -695,7 +695,7 @@ var avoidance_key = "C";
   var vaast_instructions_test_block_3 = {
     type: "html-keyboard-response",
     stimulus:
-      "<h1 class ='custom-title'>Video Game Task: Task 2</h1>" +
+      "<h1 class ='custom-title'>Video Game Task: Block 3/4</h1>" +
       "<p class='instructions'>The training phase is now over.</p>" +
       "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
       "<p class='instructions'>As a reminder, you have to:</p>" +
@@ -710,9 +710,9 @@ var avoidance_key = "C";
   var vaast_instructions_training_block_4 = {
     type : "html-keyboard-response",
     stimulus:
-      "<h1 class ='custom-title'>Video Game Task: Task 2</h1>" +
-      "<p class='instructions'><center><strong>INSTRUCTION FOR THIS SECOND SECTION</strong></center></p>" +
-      "<p class='instructions'>In this section, you have to:</p>" +
+      "<h1 class ='custom-title'>Video Game Task: Block 4/4</h1>" +
+      "<p class='instructions'><center><strong>INSTRUCTION FOR THIS LAST BLOCK</strong></center></p>" +
+      "<p class='instructions'>In this block, you have to:</p>" +
        "<ul class='instructions'>" +
         "<li><strong>APPROACH " + stim_to_approach_4 + " by pressing the MOVE FORWARD key (i.e., the " + approach_key + " key)</strong></li>" +
         "<li><strong>AVOID " + stim_to_avoid_4 + " by pressing the MOVE BACKWARD key (i.e., the " + avoidance_key + " key)</strong></li>" +
@@ -727,7 +727,7 @@ var avoidance_key = "C";
   var vaast_instructions_test_block_4 = {
     type: "html-keyboard-response",
     stimulus:
-      "<h1 class ='custom-title'>Video Game Task: Task 2</h1>" +
+      "<h1 class ='custom-title'>Video Game Task: Block 4/4</h1>" +
       "<p class='instructions'>The training phase is now over.</p>" +
       "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
       "<p class='instructions'>As a reminder, you have to:</p>" +
@@ -753,7 +753,7 @@ var avoidance_key = "C";
   var vaast_instructions_5 = {
     type: "html-keyboard-response",
     stimulus:
-      "<p class='instructions'><center><strong>End of this section</strong></center></p>" +
+      "<p class='instructions'><center><strong>End of this block</strong></center></p>" +
       "<br>" +
       "<p class = 'continue-instructions'><center>Press <strong>space</strong> to continue.</center></p>",
     choices: [32]
