@@ -302,13 +302,41 @@ var avoidance_key = "C";
   ];
   
   var vaast_stim_block_1_sociability = [
-    {stimulus: 'sociability_pos',  category: "approach_sociability_pos",  movement: approach_pos_1},
-    {stimulus: 'sociability_neg',       category: "approach_sociability_neg",  movement: approach_neg_1},
+    {stimulus: 'open-minded',   category: "approach_sociability_pos",  movement: approach_pos_1},
+    {stimulus: 'warm',          category: "approach_sociability_pos",  movement: approach_pos_1},
+    {stimulus: 'easygoing',     category: "approach_sociability_pos",  movement: approach_pos_1},
+    {stimulus: 'enthusiastic',  category: "approach_sociability_pos",  movement: approach_pos_1},
+    {stimulus: 'funny',         category: "approach_sociability_pos",  movement: approach_pos_1},
+    {stimulus: 'sociable',      category: "approach_sociability_pos",  movement: approach_pos_1},
+    {stimulus: 'playful',       category: "approach_sociability_pos",  movement: approach_pos_1},
+    {stimulus: 'extroverted',   category: "approach_sociability_pos",  movement: approach_pos_1},
+    {stimulus: 'unsociable',    category: "approach_sociability_neg",  movement: approach_neg_1},
+    {stimulus: 'cold',          category: "approach_sociability_neg",  movement: approach_neg_1},
+    {stimulus: 'humorless',     category: "approach_sociability_neg",  movement: approach_neg_1},
+    {stimulus: 'unforgiving',   category: "approach_sociability_neg",  movement: approach_neg_1},
+    {stimulus: 'negative',      category: "approach_sociability_neg",  movement: approach_neg_1},
+    {stimulus: 'unenthusiastic',category: "approach_sociability_neg",  movement: approach_neg_1},
+    {stimulus: 'introverted',   category: "approach_sociability_neg",  movement: approach_neg_1},
+    {stimulus: 'closedminded',  category: "approach_sociability_neg",  movement: approach_neg_1},
   ];
 
   var vaast_stim_block_1_morality = [
-    {stimulus: 'morality_pos',  category: "approach_morality_pos",  movement: approach_pos_1},
-    {stimulus: 'morality_neg',       category: "approach_morality_neg",  movement: approach_neg_1},
+    {stimulus: 'trustworthy',   category: "approach_morality_pos",  movement: approach_pos_1},
+    {stimulus: 'sincere',       category: "approach_morality_pos",  movement: approach_pos_1},
+    {stimulus: 'compassionate', category: "approach_morality_pos",  movement: approach_pos_1},
+    {stimulus: 'honest',        category: "approach_morality_pos",  movement: approach_pos_1},
+    {stimulus: 'fair',          category: "approach_morality_pos",  movement: approach_pos_1},
+    {stimulus: 'loyal',         category: "approach_morality_pos",  movement: approach_pos_1},
+    {stimulus: 'responsible',   category: "approach_morality_pos",  movement: approach_pos_1},
+    {stimulus: 'just',          category: "approach_morality_pos",  movement: approach_pos_1},
+    {stimulus: 'untrustworthy', category: "approach_morality_pos",  movement: approach_neg_1},
+    {stimulus: 'dishonest',     category: "approach_morality_pos",  movement: approach_neg_1},
+    {stimulus: 'disrespectful', category: "approach_morality_pos",  movement: approach_neg_1},
+    {stimulus: 'violent',       category: "approach_morality_pos",  movement: approach_neg_1},
+    {stimulus: 'unjust',        category: "approach_morality_pos",  movement: approach_neg_1},
+    {stimulus: 'disloyal',      category: "approach_morality_pos",  movement: approach_neg_1},
+    {stimulus: 'greedy',        category: "approach_morality_pos",  movement: approach_neg_1},
+    {stimulus: 'unfair',        category: "approach_morality_pos",  movement: approach_neg_1},
   ];
 
   var vaast_stim_training_block_2_sociability = [
@@ -322,13 +350,41 @@ var avoidance_key = "C";
   ];
 
   var vaast_stim_block_2_sociability = [
-    {stimulus: 'sociability_pos',  category: "approach_sociability_pos",  movement: approach_pos_2},
-    {stimulus: 'sociability_neg',       category: "approach_sociability_neg",  movement: approach_neg_2},
+    {stimulus: 'open-minded',   category: "approach_sociability_pos",  movement: approach_pos_2},
+    {stimulus: 'warm',          category: "approach_sociability_pos",  movement: approach_pos_2},
+    {stimulus: 'easygoing',     category: "approach_sociability_pos",  movement: approach_pos_2},
+    {stimulus: 'enthusiastic',  category: "approach_sociability_pos",  movement: approach_pos_2},
+    {stimulus: 'funny',         category: "approach_sociability_pos",  movement: approach_pos_2},
+    {stimulus: 'sociable',      category: "approach_sociability_pos",  movement: approach_pos_2},
+    {stimulus: 'playful',       category: "approach_sociability_pos",  movement: approach_pos_2},
+    {stimulus: 'extroverted',   category: "approach_sociability_pos",  movement: approach_pos_2},
+    {stimulus: 'unsociable',    category: "approach_sociability_neg",  movement: approach_neg_2},
+    {stimulus: 'cold',          category: "approach_sociability_neg",  movement: approach_neg_2},
+    {stimulus: 'humorless',     category: "approach_sociability_neg",  movement: approach_neg_2},
+    {stimulus: 'unforgiving',   category: "approach_sociability_neg",  movement: approach_neg_2},
+    {stimulus: 'negative',      category: "approach_sociability_neg",  movement: approach_neg_2},
+    {stimulus: 'unenthusiastic',category: "approach_sociability_neg",  movement: approach_neg_2},
+    {stimulus: 'introverted',   category: "approach_sociability_neg",  movement: approach_neg_2},
+    {stimulus: 'closedminded',  category: "approach_sociability_neg",  movement: approach_neg_2},
   ];
 
   var vaast_stim_block_2_morality = [
-    {stimulus: 'morality_pos',  category: "approach_morality_pos",  movement: approach_pos_2},
-    {stimulus: 'morality_neg',       category: "approach_morality_neg",  movement: approach_neg_2},
+    {stimulus: 'trustworthy',   category: "approach_morality_pos",  movement: approach_pos_2},
+    {stimulus: 'sincere',       category: "approach_morality_pos",  movement: approach_pos_2},
+    {stimulus: 'compassionate', category: "approach_morality_pos",  movement: approach_pos_2},
+    {stimulus: 'honest',        category: "approach_morality_pos",  movement: approach_pos_2},
+    {stimulus: 'fair',          category: "approach_morality_pos",  movement: approach_pos_2},
+    {stimulus: 'loyal',         category: "approach_morality_pos",  movement: approach_pos_2},
+    {stimulus: 'responsible',   category: "approach_morality_pos",  movement: approach_pos_2},
+    {stimulus: 'just',          category: "approach_morality_pos",  movement: approach_pos_2},
+    {stimulus: 'untrustworthy', category: "approach_morality_pos",  movement: approach_neg_2},
+    {stimulus: 'dishonest',     category: "approach_morality_pos",  movement: approach_neg_2},
+    {stimulus: 'disrespectful', category: "approach_morality_pos",  movement: approach_neg_2},
+    {stimulus: 'violent',       category: "approach_morality_pos",  movement: approach_neg_2},
+    {stimulus: 'unjust',        category: "approach_morality_pos",  movement: approach_neg_2},
+    {stimulus: 'disloyal',      category: "approach_morality_pos",  movement: approach_neg_2},
+    {stimulus: 'greedy',        category: "approach_morality_pos",  movement: approach_neg_2},
+    {stimulus: 'unfair',        category: "approach_morality_pos",  movement: approach_neg_2},
   ];
 
   var vaast_stim_training_block_3_sociability = [
@@ -342,13 +398,41 @@ var avoidance_key = "C";
   ];
 
   var vaast_stim_block_3_sociability = [
-    {stimulus: 'sociability_pos',  category: "approach_sociability_pos",  movement: approach_pos_3},
-    {stimulus: 'sociability_neg',       category: "approach_sociability_neg",  movement: approach_neg_3},
+    {stimulus: 'open-minded',   category: "approach_sociability_pos",  movement: approach_pos_3},
+    {stimulus: 'warm',          category: "approach_sociability_pos",  movement: approach_pos_3},
+    {stimulus: 'easygoing',     category: "approach_sociability_pos",  movement: approach_pos_3},
+    {stimulus: 'enthusiastic',  category: "approach_sociability_pos",  movement: approach_pos_3},
+    {stimulus: 'funny',         category: "approach_sociability_pos",  movement: approach_pos_3},
+    {stimulus: 'sociable',      category: "approach_sociability_pos",  movement: approach_pos_3},
+    {stimulus: 'playful',       category: "approach_sociability_pos",  movement: approach_pos_3},
+    {stimulus: 'extroverted',   category: "approach_sociability_pos",  movement: approach_pos_3},
+    {stimulus: 'unsociable',    category: "approach_sociability_neg",  movement: approach_neg_3},
+    {stimulus: 'cold',          category: "approach_sociability_neg",  movement: approach_neg_3},
+    {stimulus: 'humorless',     category: "approach_sociability_neg",  movement: approach_neg_3},
+    {stimulus: 'unforgiving',   category: "approach_sociability_neg",  movement: approach_neg_3},
+    {stimulus: 'negative',      category: "approach_sociability_neg",  movement: approach_neg_3},
+    {stimulus: 'unenthusiastic',category: "approach_sociability_neg",  movement: approach_neg_3},
+    {stimulus: 'introverted',   category: "approach_sociability_neg",  movement: approach_neg_3},
+    {stimulus: 'closedminded',  category: "approach_sociability_neg",  movement: approach_neg_3},
   ];
 
   var vaast_stim_block_3_morality = [
-    {stimulus: 'morality_pos',  category: "approach_morality_pos",  movement: approach_pos_3},
-    {stimulus: 'morality_neg',       category: "approach_morality_neg",  movement: approach_neg_3},
+    {stimulus: 'trustworthy',   category: "approach_morality_pos",  movement: approach_pos_3},
+    {stimulus: 'sincere',       category: "approach_morality_pos",  movement: approach_pos_3},
+    {stimulus: 'compassionate', category: "approach_morality_pos",  movement: approach_pos_3},
+    {stimulus: 'honest',        category: "approach_morality_pos",  movement: approach_pos_3},
+    {stimulus: 'fair',          category: "approach_morality_pos",  movement: approach_pos_3},
+    {stimulus: 'loyal',         category: "approach_morality_pos",  movement: approach_pos_3},
+    {stimulus: 'responsible',   category: "approach_morality_pos",  movement: approach_pos_3},
+    {stimulus: 'just',          category: "approach_morality_pos",  movement: approach_pos_3},
+    {stimulus: 'untrustworthy', category: "approach_morality_pos",  movement: approach_neg_3},
+    {stimulus: 'dishonest',     category: "approach_morality_pos",  movement: approach_neg_3},
+    {stimulus: 'disrespectful', category: "approach_morality_pos",  movement: approach_neg_3},
+    {stimulus: 'violent',       category: "approach_morality_pos",  movement: approach_neg_3},
+    {stimulus: 'unjust',        category: "approach_morality_pos",  movement: approach_neg_3},
+    {stimulus: 'disloyal',      category: "approach_morality_pos",  movement: approach_neg_3},
+    {stimulus: 'greedy',        category: "approach_morality_pos",  movement: approach_neg_3},
+    {stimulus: 'unfair',        category: "approach_morality_pos",  movement: approach_neg_3},
   ];
 
   var vaast_stim_training_block_4_sociability = [
@@ -362,13 +446,41 @@ var avoidance_key = "C";
   ];
 
   var vaast_stim_block_4_sociability = [
-    {stimulus: 'sociability_pos',  category: "approach_sociability_pos",  movement: approach_pos_4},
-    {stimulus: 'sociability_neg',       category: "approach_sociability_neg",  movement: approach_neg_4},
+    {stimulus: 'open-minded',   category: "approach_sociability_pos",  movement: approach_pos_4},
+    {stimulus: 'warm',          category: "approach_sociability_pos",  movement: approach_pos_4},
+    {stimulus: 'easygoing',     category: "approach_sociability_pos",  movement: approach_pos_4},
+    {stimulus: 'enthusiastic',  category: "approach_sociability_pos",  movement: approach_pos_4},
+    {stimulus: 'funny',         category: "approach_sociability_pos",  movement: approach_pos_4},
+    {stimulus: 'sociable',      category: "approach_sociability_pos",  movement: approach_pos_4},
+    {stimulus: 'playful',       category: "approach_sociability_pos",  movement: approach_pos_4},
+    {stimulus: 'extroverted',   category: "approach_sociability_pos",  movement: approach_pos_4},
+    {stimulus: 'unsociable',    category: "approach_sociability_neg",  movement: approach_neg_4},
+    {stimulus: 'cold',          category: "approach_sociability_neg",  movement: approach_neg_4},
+    {stimulus: 'humorless',     category: "approach_sociability_neg",  movement: approach_neg_4},
+    {stimulus: 'unforgiving',   category: "approach_sociability_neg",  movement: approach_neg_4},
+    {stimulus: 'negative',      category: "approach_sociability_neg",  movement: approach_neg_4},
+    {stimulus: 'unenthusiastic',category: "approach_sociability_neg",  movement: approach_neg_4},
+    {stimulus: 'introverted',   category: "approach_sociability_neg",  movement: approach_neg_4},
+    {stimulus: 'closedminded',  category: "approach_sociability_neg",  movement: approach_neg_4},
   ];
 
   var vaast_stim_block_4_morality = [
-    {stimulus: 'morality_pos',  category: "approach_morality_pos",  movement: approach_pos_4},
-    {stimulus: 'morality_neg',       category: "approach_morality_neg",  movement: approach_neg_4},
+    {stimulus: 'trustworthy',   category: "approach_morality_pos",  movement: approach_pos_4},
+    {stimulus: 'sincere',       category: "approach_morality_pos",  movement: approach_pos_4},
+    {stimulus: 'compassionate', category: "approach_morality_pos",  movement: approach_pos_4},
+    {stimulus: 'honest',        category: "approach_morality_pos",  movement: approach_pos_4},
+    {stimulus: 'fair',          category: "approach_morality_pos",  movement: approach_pos_4},
+    {stimulus: 'loyal',         category: "approach_morality_pos",  movement: approach_pos_4},
+    {stimulus: 'responsible',   category: "approach_morality_pos",  movement: approach_pos_4},
+    {stimulus: 'just',          category: "approach_morality_pos",  movement: approach_pos_4},
+    {stimulus: 'untrustworthy', category: "approach_morality_pos",  movement: approach_neg_4},
+    {stimulus: 'dishonest',     category: "approach_morality_pos",  movement: approach_neg_4},
+    {stimulus: 'disrespectful', category: "approach_morality_pos",  movement: approach_neg_4},
+    {stimulus: 'violent',       category: "approach_morality_pos",  movement: approach_neg_4},
+    {stimulus: 'unjust',        category: "approach_morality_pos",  movement: approach_neg_4},
+    {stimulus: 'disloyal',      category: "approach_morality_pos",  movement: approach_neg_4},
+    {stimulus: 'greedy',        category: "approach_morality_pos",  movement: approach_neg_4},
+    {stimulus: 'unfair',        category: "approach_morality_pos",  movement: approach_neg_4},
   ];
 
 
