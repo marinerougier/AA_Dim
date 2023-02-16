@@ -36,10 +36,10 @@
       var exclusion = {
           type: "html-keyboard-response",
           stimulus:
-          "<p>Unfortunately, this study is not compatible with your " +
-          "browser.</p>" +
-          "<p>Please reopen this experiment from a supported browser (like " +
-          "Chrome or Firefox).</p>",
+          "<p>Malheureusement, cette étude n'est pas compatible avec votre " +
+          "navigateur.</p>" +
+          "<p>Veuillez rouvrir cette expérience à partir d'un navigateur pris en charge (par exemple " +
+          "Chrome ou Firefox).</p>",
           choices: jsPsych.NO_KEYS
       };
 
@@ -88,7 +88,7 @@
       if(!first_connection) {
       dialog = bootbox.dialog({
           title: 'Connection lost',
-          message: '<p><i class="fa fa-spin fa-spinner"></i> Please wait while we try to reconnect.</p>',
+          message: '<p><i class="fa fa-spin fa-spinner"></i> Veuillez patienter pendant que nous essayons de nous reconnecter.</p>',
           closeButton: false
           });
     }
@@ -120,27 +120,13 @@ var avoidance_key = "C";
 
   // Variable input -----------------------------------------------------------------------
   // Variable used to define experimental condition.
-  var vaast_cond_block_1 = jsPsych.randomization.sampleWithoutReplacement(["approach_sociability_pos", "approach_sociability_neg", "approach_morality_pos", "approach_morality_neg"], 1)[0];
+  var vaast_cond_block_1 = jsPsych.randomization.sampleWithoutReplacement(["approach_pos", "approach_neg"], 1)[0];
 
-
-
-   if (vaast_cond_block_1 == "approach_sociability_pos") {
-     vaast_cond_block_2 = "approach_sociability_neg";
-     vaast_cond_block_3 = "approach_morality_pos";
-     vaast_cond_block_4 = "approach_morality_neg";
-   } else if (vaast_cond_block_1 == "approach_sociability_neg") {
-     vaast_cond_block_2 = "approach_sociability_pos";
-     vaast_cond_block_3 = "approach_morality_neg";
-     vaast_cond_block_4 = "approach_morality_pos";
-   } else if (vaast_cond_block_1 == "approach_morality_pos") {
-     vaast_cond_block_2 = "approach_morality_neg";
-     vaast_cond_block_3 = "approach_sociability_pos";
-     vaast_cond_block_4 = "approach_sociability_neg";
-   } else if (vaast_cond_block_1 == "approach_morality_neg") {
-     vaast_cond_block_2 = "approach_morality_pos";
-     vaast_cond_block_3 = "approach_sociability_neg";
-     vaast_cond_block_4 = "approach_sociability_pos";
-   }
+   if (vaast_cond_block_1 == "approach_pos") {
+     vaast_cond_block_2 = "approach_neg";
+   } else if (vaast_cond_block_1 == "approach_neg") {
+     vaast_cond_block_2 = "approach_pos";
+   } 
 
   // prolific variables
   var prolific_id = jsPsych.data.getURLVariable('prolific_id');
@@ -152,335 +138,77 @@ var avoidance_key = "C";
 
   // VAAST --------------------------------------------------------------------------------
   // VAAST variables ----------------------------------------------------------------------
-  var approach_pos_1 = undefined;
-  var approach_neg_1 = undefined;
-  var approach_pos_2 = undefined;
-  var approach_neg_2 = undefined;
-  var approach_pos_3 = undefined;
-  var approach_neg_3 = undefined;
-  var approach_pos_4 = undefined;
-  var approach_neg_4 = undefined;
+  var movement_pos_1 = undefined;
+  var movement_neg_1 = undefined;
+  var movement_pos_2 = undefined;
+  var movement_neg_2 = undefined;
 
   var stim_to_approach_1 = undefined;
   var stim_to_approach_2 = undefined;
-  var stim_to_approach_3 = undefined;
-  var stim_to_approach_4 = undefined;
   var stim_to_avoid_1    = undefined;
   var stim_to_avoid_2    = undefined;
-  var stim_to_avoid_3    = undefined;
-  var stim_to_avoid_4    = undefined;
 
   switch(vaast_cond_block_1) {
-    case "approach_sociability_pos":
-      approach_pos_1 = "approach";
-      approach_neg_1 = "avoidance";
-      stim_to_approach_1 = "POSITIVE words related to SOCIABILITY";
-      stim_to_avoid_1 = "NEGATIVE words related to SOCIABILITY";
+    case "approach_pos":
+      movement_pos_1 = "approach";
+      movement_neg_1 = "avoidance";
+      stim_to_approach_1 = "les mots <b>POSITIFS</b> liés à la sociabilité et à la moralité";
+      stim_to_avoid_1 = "les mots <b>NEGATIFS</b> liés à la sociabilité et à la moralité";
       break;
 
-    case "approach_sociability_neg":
-      approach_pos_1 = "avoidance";
-      approach_neg_1 = "approach";
-      stim_to_approach_1 = "NEGATIVE words related to SOCIABILITY";
-      stim_to_avoid_1 = "POSITIVE words related to SOCIABILITY";
-      break;
-
-    case "approach_morality_pos":
-      approach_pos_1 = "approach";
-      approach_neg_1 = "avoidance";
-      stim_to_approach_1 = "POSITIVE words related to MORALITY";
-      stim_to_avoid_1 = "NEGATIVE words related to MORALITY";
-      break;
-
-    case "approach_morality_neg":
-      approach_pos_1 = "avoidance";
-      approach_neg_1 = "approach";
-      stim_to_approach_1 = "NEGATIVE words related to MORALITY";
-      stim_to_avoid_1 = "POSITIVE words related to MORALITY";
+    case "approach_neg":
+      movement_pos_1 = "avoidance";
+      movement_neg_1 = "approach";
+      stim_to_approach_1 = "les mots <b>NEGATIFS</b> liés à la sociabilité et à la moralité";
+      stim_to_avoid_1 = "les mots <b>POSITIFS</b> liés à la sociabilité et à la moralité";
       break;
   }
 
   switch(vaast_cond_block_2) {
-    case "approach_sociability_pos":
-      approach_pos_2 = "approach";
-      approach_neg_2 = "avoidance";
-      stim_to_approach_2 = "POSITIVE words related to SOCIABILITY";
-      stim_to_avoid_2 = "NEGATIVE words related to SOCIABILITY";
+    case "approach_pos":
+      movement_pos_2 = "approach";
+      movement_neg_2 = "avoidance";
+      stim_to_approach_2 = "les mots <b>POSITIFS</b> liés à la sociabilité et à la moralité";
+      stim_to_avoid_2 = "les mots <b>NEGATIFS</b> liés à la sociabilité et à la moralité";
       break;
 
-    case "approach_sociability_neg":
-      approach_pos_2 = "avoidance";
-      approach_neg_2 = "approach";
-      stim_to_approach_2 = "NEGATIVE words related to SOCIABILITY";
-      stim_to_avoid_2 = "POSITIVE words related to SOCIABILITY";
-      break;
-
-    case "approach_morality_pos":
-      approach_pos_2 = "approach";
-      approach_neg_2 = "avoidance";
-      stim_to_approach_2 = "POSITIVE words related to MORALITY";
-      stim_to_avoid_2 = "NEGATIVE words related to MORALITY";
-      break;
-
-    case "approach_morality_neg":
-      approach_pos_2 = "avoidance";
-      approach_neg_2 = "approach";
-      stim_to_approach_2 = "NEGATIVE words related to MORALITY";
-      stim_to_avoid_2 = "POSITIVE words related to MORALITY";
+    case "approach_neg":
+      movement_pos_2 = "avoidance";
+      movement_neg_2 = "approach";
+      stim_to_approach_2 = "les mots <b>NEGATIFS</b> liés à la sociabilité et à la moralité";
+      stim_to_avoid_2 = "les mots <b>POSITIFS</b> liés à la sociabilité et à la moralité";
       break;
   }
 
-  switch(vaast_cond_block_3) {
-    case "approach_sociability_pos":
-      approach_pos_3 = "approach";
-      approach_neg_3 = "avoidance";
-      stim_to_approach_3 = "POSITIVE words related to SOCIABILITY";
-      stim_to_avoid_3 = "NEGATIVE words related to SOCIABILITY";
-      break;
-
-    case "approach_sociability_neg":
-      approach_pos_3 = "avoidance";
-      approach_neg_3 = "approach";
-      stim_to_approach_3 = "NEGATIVE words related to SOCIABILITY";
-      stim_to_avoid_3 = "POSITIVE words related to SOCIABILITY";
-      break;
-
-    case "approach_morality_pos":
-      approach_pos_3 = "approach";
-      approach_neg_3 = "avoidance";
-      stim_to_approach_3 = "POSITIVE words related to MORALITY";
-      stim_to_avoid_3 = "NEGATIVE words related to MORALITY";
-      break;
-
-    case "approach_morality_neg":
-      approach_pos_3 = "avoidance";
-      approach_neg_3 = "approach";
-      stim_to_approach_3 = "NEGATIVE words related to MORALITY";
-      stim_to_avoid_3 = "POSITIVE words related to MORALITY";
-      break;
-  }
-
-  switch(vaast_cond_block_4) {
-    case "approach_sociability_pos":
-      approach_pos_4 = "approach";
-      approach_neg_4 = "avoidance";
-      stim_to_approach_4 = "POSITIVE words related to SOCIABILITY";
-      stim_to_avoid_4 = "NEGATIVE words related to SOCIABILITY";
-      break;
-
-    case "approach_sociability_neg":
-      approach_pos_4 = "avoidance";
-      approach_neg_4 = "approach";
-      stim_to_approach_4 = "NEGATIVE words related to SOCIABILITY";
-      stim_to_avoid_4 = "POSITIVE words related to SOCIABILITY";
-      break;
-
-    case "approach_morality_pos":
-      approach_pos_4 = "approach";
-      approach_neg_4 = "avoidance";
-      stim_to_approach_4 = "POSITIVE words related to MORALITY";
-      stim_to_avoid_4 = "NEGATIVE words related to MORALITY";
-      break;
-
-    case "approach_morality_neg":
-      approach_pos_4 = "avoidance";
-      approach_neg_4 = "approach";
-      stim_to_approach_4 = "NEGATIVE words related to MORALITY";
-      stim_to_avoid_4 = "POSITIVE words related to MORALITY";
-      break;
-  }
 
   // VAAST stimuli ------------------------------------------------------------------------
-  var vaast_stim_training_block_1_sociability = [
-    {stimulus: 'sociability_pos_training',     category: "approach_sociability_pos", movement: approach_pos_1},
-    {stimulus: 'sociability_neg_training',      category: "approach_sociability_neg", movement: approach_neg_1}
-  ];
-
-  var vaast_stim_training_block_1_morality = [
-    {stimulus: 'morality_pos_training',     category: "approach_morality_pos", movement: approach_pos_1},
-    {stimulus: 'morality_neg_training',    category: "approach_morality_neg", movement: approach_neg_1}
+  var vaast_stim_training_block_1 = [
+    {stimulus: 'sociability_pos_training',  category: "sociability_pos", movement: movement_pos_1},
+    {stimulus: 'sociability_neg_training',  category: "sociability_neg", movement: movement_neg_1},
+    {stimulus: 'morality_pos_training',     category: "morality_pos", movement: movement_pos_1},
+    {stimulus: 'morality_neg_training',     category: "morality_neg", movement: movement_neg_1}
   ];
   
-  var vaast_stim_block_1_sociability = [
-    {stimulus: 'open-minded',   category: "approach_sociability_pos",  movement: approach_pos_1},
-    {stimulus: 'warm',          category: "approach_sociability_pos",  movement: approach_pos_1},
-    {stimulus: 'easygoing',     category: "approach_sociability_pos",  movement: approach_pos_1},
-    {stimulus: 'enthusiastic',  category: "approach_sociability_pos",  movement: approach_pos_1},
-    {stimulus: 'funny',         category: "approach_sociability_pos",  movement: approach_pos_1},
-    {stimulus: 'sociable',      category: "approach_sociability_pos",  movement: approach_pos_1},
-    {stimulus: 'playful',       category: "approach_sociability_pos",  movement: approach_pos_1},
-    {stimulus: 'extroverted',   category: "approach_sociability_pos",  movement: approach_pos_1},
-    {stimulus: 'unsociable',    category: "approach_sociability_neg",  movement: approach_neg_1},
-    {stimulus: 'cold',          category: "approach_sociability_neg",  movement: approach_neg_1},
-    {stimulus: 'humorless',     category: "approach_sociability_neg",  movement: approach_neg_1},
-    {stimulus: 'unforgiving',   category: "approach_sociability_neg",  movement: approach_neg_1},
-    {stimulus: 'negative',      category: "approach_sociability_neg",  movement: approach_neg_1},
-    {stimulus: 'unenthusiastic',category: "approach_sociability_neg",  movement: approach_neg_1},
-    {stimulus: 'introverted',   category: "approach_sociability_neg",  movement: approach_neg_1},
-    {stimulus: 'closedminded',  category: "approach_sociability_neg",  movement: approach_neg_1},
+  var vaast_stim_block_1 = [
+    {stimulus: 'open-minded',   category: "sociability_pos",  movement: movement_pos_1},
+    {stimulus: 'closedminded',  category: "sociability_neg",  movement: movement_neg_1},
+    {stimulus: 'trustworthy',   category: "morality_pos",  movement: movement_pos_1},
+    {stimulus: 'unfair',        category: "morality_neg",  movement: movement_neg_1},
   ];
 
-  var vaast_stim_block_1_morality = [
-    {stimulus: 'trustworthy',   category: "approach_morality_pos",  movement: approach_pos_1},
-    {stimulus: 'sincere',       category: "approach_morality_pos",  movement: approach_pos_1},
-    {stimulus: 'compassionate', category: "approach_morality_pos",  movement: approach_pos_1},
-    {stimulus: 'honest',        category: "approach_morality_pos",  movement: approach_pos_1},
-    {stimulus: 'fair',          category: "approach_morality_pos",  movement: approach_pos_1},
-    {stimulus: 'loyal',         category: "approach_morality_pos",  movement: approach_pos_1},
-    {stimulus: 'responsible',   category: "approach_morality_pos",  movement: approach_pos_1},
-    {stimulus: 'just',          category: "approach_morality_pos",  movement: approach_pos_1},
-    {stimulus: 'untrustworthy', category: "approach_morality_pos",  movement: approach_neg_1},
-    {stimulus: 'dishonest',     category: "approach_morality_pos",  movement: approach_neg_1},
-    {stimulus: 'disrespectful', category: "approach_morality_pos",  movement: approach_neg_1},
-    {stimulus: 'violent',       category: "approach_morality_pos",  movement: approach_neg_1},
-    {stimulus: 'unjust',        category: "approach_morality_pos",  movement: approach_neg_1},
-    {stimulus: 'disloyal',      category: "approach_morality_pos",  movement: approach_neg_1},
-    {stimulus: 'greedy',        category: "approach_morality_pos",  movement: approach_neg_1},
-    {stimulus: 'unfair',        category: "approach_morality_pos",  movement: approach_neg_1},
+
+  var vaast_stim_training_block_2 = [
+    {stimulus: 'sociability_pos_training',  category: "sociability_pos", movement: movement_pos_2},
+    {stimulus: 'sociability_neg_training',  category: "sociability_neg", movement: movement_neg_2},
+    {stimulus: 'morality_pos_training',     category: "morality_pos", movement: movement_pos_2},
+    {stimulus: 'morality_neg_training',     category: "morality_neg", movement: movement_neg_2}
   ];
 
-  var vaast_stim_training_block_2_sociability = [
-    {stimulus: 'sociability_pos_training',     category: "approach_sociability_pos", movement: approach_pos_2},
-    {stimulus: 'sociability_neg_training',    category: "approach_sociability_neg", movement: approach_neg_2},
-  ];
-
-  var vaast_stim_training_block_2_morality = [
-    {stimulus: 'morality_pos_training',     category: "approach_morality_pos", movement: approach_pos_2},
-    {stimulus: 'morality_neg_training',    category: "approach_morality_neg", movement: approach_neg_2},
-  ];
-
-  var vaast_stim_block_2_sociability = [
-    {stimulus: 'open-minded',   category: "approach_sociability_pos",  movement: approach_pos_2},
-    {stimulus: 'warm',          category: "approach_sociability_pos",  movement: approach_pos_2},
-    {stimulus: 'easygoing',     category: "approach_sociability_pos",  movement: approach_pos_2},
-    {stimulus: 'enthusiastic',  category: "approach_sociability_pos",  movement: approach_pos_2},
-    {stimulus: 'funny',         category: "approach_sociability_pos",  movement: approach_pos_2},
-    {stimulus: 'sociable',      category: "approach_sociability_pos",  movement: approach_pos_2},
-    {stimulus: 'playful',       category: "approach_sociability_pos",  movement: approach_pos_2},
-    {stimulus: 'extroverted',   category: "approach_sociability_pos",  movement: approach_pos_2},
-    {stimulus: 'unsociable',    category: "approach_sociability_neg",  movement: approach_neg_2},
-    {stimulus: 'cold',          category: "approach_sociability_neg",  movement: approach_neg_2},
-    {stimulus: 'humorless',     category: "approach_sociability_neg",  movement: approach_neg_2},
-    {stimulus: 'unforgiving',   category: "approach_sociability_neg",  movement: approach_neg_2},
-    {stimulus: 'negative',      category: "approach_sociability_neg",  movement: approach_neg_2},
-    {stimulus: 'unenthusiastic',category: "approach_sociability_neg",  movement: approach_neg_2},
-    {stimulus: 'introverted',   category: "approach_sociability_neg",  movement: approach_neg_2},
-    {stimulus: 'closedminded',  category: "approach_sociability_neg",  movement: approach_neg_2},
-  ];
-
-  var vaast_stim_block_2_morality = [
-    {stimulus: 'trustworthy',   category: "approach_morality_pos",  movement: approach_pos_2},
-    {stimulus: 'sincere',       category: "approach_morality_pos",  movement: approach_pos_2},
-    {stimulus: 'compassionate', category: "approach_morality_pos",  movement: approach_pos_2},
-    {stimulus: 'honest',        category: "approach_morality_pos",  movement: approach_pos_2},
-    {stimulus: 'fair',          category: "approach_morality_pos",  movement: approach_pos_2},
-    {stimulus: 'loyal',         category: "approach_morality_pos",  movement: approach_pos_2},
-    {stimulus: 'responsible',   category: "approach_morality_pos",  movement: approach_pos_2},
-    {stimulus: 'just',          category: "approach_morality_pos",  movement: approach_pos_2},
-    {stimulus: 'untrustworthy', category: "approach_morality_pos",  movement: approach_neg_2},
-    {stimulus: 'dishonest',     category: "approach_morality_pos",  movement: approach_neg_2},
-    {stimulus: 'disrespectful', category: "approach_morality_pos",  movement: approach_neg_2},
-    {stimulus: 'violent',       category: "approach_morality_pos",  movement: approach_neg_2},
-    {stimulus: 'unjust',        category: "approach_morality_pos",  movement: approach_neg_2},
-    {stimulus: 'disloyal',      category: "approach_morality_pos",  movement: approach_neg_2},
-    {stimulus: 'greedy',        category: "approach_morality_pos",  movement: approach_neg_2},
-    {stimulus: 'unfair',        category: "approach_morality_pos",  movement: approach_neg_2},
-  ];
-
-  var vaast_stim_training_block_3_sociability = [
-    {stimulus: 'sociability_pos_training',     category: "approach_sociability_pos", movement: approach_pos_3},
-    {stimulus: 'sociability_neg_training',    category: "approach_sociability_neg", movement: approach_neg_3},
-  ];
-
-  var vaast_stim_training_block_3_morality = [
-    {stimulus: 'morality_pos_training',     category: "approach_morality_pos", movement: approach_pos_3},
-    {stimulus: 'morality_neg_training',    category: "approach_morality_neg", movement: approach_neg_3},
-  ];
-
-  var vaast_stim_block_3_sociability = [
-    {stimulus: 'open-minded',   category: "approach_sociability_pos",  movement: approach_pos_3},
-    {stimulus: 'warm',          category: "approach_sociability_pos",  movement: approach_pos_3},
-    {stimulus: 'easygoing',     category: "approach_sociability_pos",  movement: approach_pos_3},
-    {stimulus: 'enthusiastic',  category: "approach_sociability_pos",  movement: approach_pos_3},
-    {stimulus: 'funny',         category: "approach_sociability_pos",  movement: approach_pos_3},
-    {stimulus: 'sociable',      category: "approach_sociability_pos",  movement: approach_pos_3},
-    {stimulus: 'playful',       category: "approach_sociability_pos",  movement: approach_pos_3},
-    {stimulus: 'extroverted',   category: "approach_sociability_pos",  movement: approach_pos_3},
-    {stimulus: 'unsociable',    category: "approach_sociability_neg",  movement: approach_neg_3},
-    {stimulus: 'cold',          category: "approach_sociability_neg",  movement: approach_neg_3},
-    {stimulus: 'humorless',     category: "approach_sociability_neg",  movement: approach_neg_3},
-    {stimulus: 'unforgiving',   category: "approach_sociability_neg",  movement: approach_neg_3},
-    {stimulus: 'negative',      category: "approach_sociability_neg",  movement: approach_neg_3},
-    {stimulus: 'unenthusiastic',category: "approach_sociability_neg",  movement: approach_neg_3},
-    {stimulus: 'introverted',   category: "approach_sociability_neg",  movement: approach_neg_3},
-    {stimulus: 'closedminded',  category: "approach_sociability_neg",  movement: approach_neg_3},
-  ];
-
-  var vaast_stim_block_3_morality = [
-    {stimulus: 'trustworthy',   category: "approach_morality_pos",  movement: approach_pos_3},
-    {stimulus: 'sincere',       category: "approach_morality_pos",  movement: approach_pos_3},
-    {stimulus: 'compassionate', category: "approach_morality_pos",  movement: approach_pos_3},
-    {stimulus: 'honest',        category: "approach_morality_pos",  movement: approach_pos_3},
-    {stimulus: 'fair',          category: "approach_morality_pos",  movement: approach_pos_3},
-    {stimulus: 'loyal',         category: "approach_morality_pos",  movement: approach_pos_3},
-    {stimulus: 'responsible',   category: "approach_morality_pos",  movement: approach_pos_3},
-    {stimulus: 'just',          category: "approach_morality_pos",  movement: approach_pos_3},
-    {stimulus: 'untrustworthy', category: "approach_morality_pos",  movement: approach_neg_3},
-    {stimulus: 'dishonest',     category: "approach_morality_pos",  movement: approach_neg_3},
-    {stimulus: 'disrespectful', category: "approach_morality_pos",  movement: approach_neg_3},
-    {stimulus: 'violent',       category: "approach_morality_pos",  movement: approach_neg_3},
-    {stimulus: 'unjust',        category: "approach_morality_pos",  movement: approach_neg_3},
-    {stimulus: 'disloyal',      category: "approach_morality_pos",  movement: approach_neg_3},
-    {stimulus: 'greedy',        category: "approach_morality_pos",  movement: approach_neg_3},
-    {stimulus: 'unfair',        category: "approach_morality_pos",  movement: approach_neg_3},
-  ];
-
-  var vaast_stim_training_block_4_sociability = [
-    {stimulus: 'sociability_pos_training',     category: "approach_sociability_pos", movement: approach_pos_4},
-    {stimulus: 'sociability_neg_training',    category: "approach_sociability_neg", movement: approach_neg_4},
-  ];
-
-  var vaast_stim_training_block_4_morality = [
-    {stimulus: 'morality_pos_training',     category: "approach_morality_pos", movement: approach_pos_4},
-    {stimulus: 'morality_neg_training',    category: "approach_morality_neg", movement: approach_neg_4},
-  ];
-
-  var vaast_stim_block_4_sociability = [
-    {stimulus: 'open-minded',   category: "approach_sociability_pos",  movement: approach_pos_4},
-    {stimulus: 'warm',          category: "approach_sociability_pos",  movement: approach_pos_4},
-    {stimulus: 'easygoing',     category: "approach_sociability_pos",  movement: approach_pos_4},
-    {stimulus: 'enthusiastic',  category: "approach_sociability_pos",  movement: approach_pos_4},
-    {stimulus: 'funny',         category: "approach_sociability_pos",  movement: approach_pos_4},
-    {stimulus: 'sociable',      category: "approach_sociability_pos",  movement: approach_pos_4},
-    {stimulus: 'playful',       category: "approach_sociability_pos",  movement: approach_pos_4},
-    {stimulus: 'extroverted',   category: "approach_sociability_pos",  movement: approach_pos_4},
-    {stimulus: 'unsociable',    category: "approach_sociability_neg",  movement: approach_neg_4},
-    {stimulus: 'cold',          category: "approach_sociability_neg",  movement: approach_neg_4},
-    {stimulus: 'humorless',     category: "approach_sociability_neg",  movement: approach_neg_4},
-    {stimulus: 'unforgiving',   category: "approach_sociability_neg",  movement: approach_neg_4},
-    {stimulus: 'negative',      category: "approach_sociability_neg",  movement: approach_neg_4},
-    {stimulus: 'unenthusiastic',category: "approach_sociability_neg",  movement: approach_neg_4},
-    {stimulus: 'introverted',   category: "approach_sociability_neg",  movement: approach_neg_4},
-    {stimulus: 'closedminded',  category: "approach_sociability_neg",  movement: approach_neg_4},
-  ];
-
-  var vaast_stim_block_4_morality = [
-    {stimulus: 'trustworthy',   category: "approach_morality_pos",  movement: approach_pos_4},
-    {stimulus: 'sincere',       category: "approach_morality_pos",  movement: approach_pos_4},
-    {stimulus: 'compassionate', category: "approach_morality_pos",  movement: approach_pos_4},
-    {stimulus: 'honest',        category: "approach_morality_pos",  movement: approach_pos_4},
-    {stimulus: 'fair',          category: "approach_morality_pos",  movement: approach_pos_4},
-    {stimulus: 'loyal',         category: "approach_morality_pos",  movement: approach_pos_4},
-    {stimulus: 'responsible',   category: "approach_morality_pos",  movement: approach_pos_4},
-    {stimulus: 'just',          category: "approach_morality_pos",  movement: approach_pos_4},
-    {stimulus: 'untrustworthy', category: "approach_morality_pos",  movement: approach_neg_4},
-    {stimulus: 'dishonest',     category: "approach_morality_pos",  movement: approach_neg_4},
-    {stimulus: 'disrespectful', category: "approach_morality_pos",  movement: approach_neg_4},
-    {stimulus: 'violent',       category: "approach_morality_pos",  movement: approach_neg_4},
-    {stimulus: 'unjust',        category: "approach_morality_pos",  movement: approach_neg_4},
-    {stimulus: 'disloyal',      category: "approach_morality_pos",  movement: approach_neg_4},
-    {stimulus: 'greedy',        category: "approach_morality_pos",  movement: approach_neg_4},
-    {stimulus: 'unfair',        category: "approach_morality_pos",  movement: approach_neg_4},
+ var vaast_stim_block_2 = [
+    {stimulus: 'open-minded',   category: "sociability_pos",  movement: movement_pos_2},
+    {stimulus: 'closedminded',  category: "sociability_neg",  movement: movement_neg_2},
+    {stimulus: 'trustworthy',   category: "morality_pos",  movement: movement_pos_2},
+    {stimulus: 'unfair',        category: "morality_neg",  movement: movement_neg_2},
   ];
 
 
@@ -537,9 +265,7 @@ var avoidance_key = "C";
           	   prolific_id: prolific_id,
           	   timestamp: firebase.database.ServerValue.TIMESTAMP,
                vaast_cond_block_1: vaast_cond_block_1,
-               vaast_cond_block_2: vaast_cond_block_2,
-               vaast_cond_block_3: vaast_cond_block_3,
-               vaast_cond_block_4: vaast_cond_block_4})
+               vaast_cond_block_2: vaast_cond_block_2})
   }
 
   // vaast trial --------------------------------------------------------------------------
@@ -552,8 +278,6 @@ var avoidance_key = "C";
           timestamp: firebase.database.ServerValue.TIMESTAMP,
           vaast_cond_block_1: vaast_cond_block_1,
           vaast_cond_block_2: vaast_cond_block_2,
-          vaast_cond_block_3: vaast_cond_block_3,
-          vaast_cond_block_4: vaast_cond_block_4,
           vaast_trial_data: jsPsych.data.get().last(4).json()})
   }
 
@@ -566,8 +290,6 @@ var avoidance_key = "C";
          timestamp: firebase.database.ServerValue.TIMESTAMP,
          vaast_cond_block_1: vaast_cond_block_1,
          vaast_cond_block_2: vaast_cond_block_2,
-         vaast_cond_block_3: vaast_cond_block_3,
-         vaast_cond_block_4: vaast_cond_block_4,
          extra_data: jsPsych.data.get().last(7).json(),
         })
   }
@@ -581,8 +303,6 @@ var avoidance_key = "C";
          timestamp: firebase.database.ServerValue.TIMESTAMP,
          vaast_cond_block_1: vaast_cond_block_1,
          vaast_cond_block_2: vaast_cond_block_2,
-         vaast_cond_block_3: vaast_cond_block_3,
-         vaast_cond_block_4: vaast_cond_block_4,
       completion: completion,
       event_data: jsPsych.data.getInteractionData().json()})
   }
@@ -639,8 +359,8 @@ var avoidance_key = "C";
   var consent = {
     type: "html-button-response",
     stimulus:
-    "<h1 class ='custom-title'> Informed consent </h1>" +
-      "<p class='instructions'>By clicking below to start the study, you recognize that:</p>" +
+    "<h1 class ='custom-title'> Consentement éclairé </h1>" +
+      "<p class='instructions'>En cliquant ci-dessous pour commencer l'étude, vous reconnaissez que :</p>" +
         "<ul class='instructions'>" +
           "<li>You know you can stop your participation at any time, without having to justify yourself. " +
           "However, keep in mind that you have to complete the whole study in order to be paid.</li>" +
@@ -649,16 +369,16 @@ var avoidance_key = "C";
           "<li>You know the data collected will be strictly confidential and it will be impossible for " +
           "any unauthorized third party to identify you.</li>" +
         "</ul>" +
-      "<p class='instructions'>By clicking on the \"I confirm\" button, you give your free and informed consent to participate " +
-      "in this research.</p>",
-    choices: ['I confirm']
+      "<p class='instructions'>En cliquant sur le bouton \"Je confirme\", vous accordez votre consentement éclairé pour " +
+      "participer à cette recherche.</p>",
+    choices: ['Je confirme']
   }
 
   // Switching to fullscreen --------------------------------------------------------------
   var fullscreen_trial = {
     type: 'fullscreen',
-    message:  '<p>To take part in this study, your browser needs to be set to fullscreen.</p>',
-    button_label: 'Switch to fullscreen',
+    message:  '<p>Pour participer à cette étude, votre navigateur doit être réglé sur plein écran.</p>',
+    button_label: 'Passer en plein écran',
     fullscreen_mode: true
   }
 
@@ -666,15 +386,33 @@ var avoidance_key = "C";
   // First slide --------------------------------------------------------------------------
   var instructions = {
     type: "html-keyboard-response",
-    stimulus: "<p class='instructions'>You are now about to start the study. "+
+    stimulus: "<p class='instructions'>Vous êtes maintenant sur le point de commencer l'étude. "+
     "<br><br>"+
-    "In this study, you will engage in a categorization task named the 'Video Game task'. " +
-    "This task is divided into four blocks.</p>" +
-    "<p class='instructions'>In two blocks you will categorize positive and negative words related "+
-    "to sociability (e.g., 'sociable' vs. 'associable') and in the other two blocks "+
-    "you will categorize positive and negative words related to morality "+
-    "(e.g., 'moral' vs. 'immoral'). </p>" +
-    "<p class = 'continue-instructions'>Press <strong>space</strong> to start.</p>",
+    "Dans cette étude, vous allez effectuer une tâche de catégorisation appelée la 'tâche du jeu vidéo'. " +
+    "Cette tâche est divisée en deux blocs.</p>" +
+    "<p class='instructions'>Votre tâche sera de catégoriser des mots positifs et négatifs liés "+
+    "à la sociabilité et à la moralité. "+
+    "Veuillez prendre quelques instants pour regarder à quelle categorie appartient chaque mot : </p>" +
+    "<table>" +
+      "<tr>" +
+        "<th width='200px'><p font:80> <br><br></p></th>" +
+        "<th align='center'><p font:80>Mots positifs<br><br></p></th>" +
+        "<th align='center'><p font:80>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMots négatifs<br><br></p></th>" +
+      "</tr>" +
+      "<br>" +
+      "<tr>" +
+        "<td><b>Mots reliés à <br>la sociabilité :</b></td>" +
+        "<td align='center'>mot1, &nbsp&nbspmot2, <br>&nbsp&nbspmot3</td>"+
+        "<td align='center'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmot1, &nbsp&nbspmot2, <br>&nbsp&nbspmot3</td>"+
+      "</tr>" +
+      "<tr>" +
+        "<td><br><b>Mots reliés à<br> la moralité :</b></td>" +        
+        "<td align='center'>mot1, &nbsp&nbspmot2, <br>&nbsp&nbspmot3</td>"+
+        "<td align='center'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmot1, &nbsp&nbspmot2, <br>&nbsp&nbspmot3</td>"+
+      "</tr>" +
+    "</table>" +
+    "<br>" +
+    "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer.</p>",
     choices: [32]
   };
 
@@ -683,191 +421,128 @@ var avoidance_key = "C";
   var vaast_instructions_1 = {
     type: "html-keyboard-response",
     stimulus:
-      "<h1 class ='custom-title'>Video Game Task</h1>" +
-      "<p class='instructions'>In this task, like in a video game, you will see an environment " +
-      "(presented below) in which you will be able to move forward or backward.</p>" +
+      "<h1 class ='custom-title'>Tâche du jeu vidéo</h1>" +
+      "<p class='instructions'>Dans cette tâche, comme dans un jeu vidéo, vous vous trouverez dans un environnement virtuel " +
+      "(présenté ci-dessous) dans lequel vous pourrez avancer ou reculer.</p>" +
       "<p class='instructions'><center>" +
         "<img src = 'media/vaast-background.png'>" +
       "</center></p>" +
-      "<p class = 'continue-instructions'>Press <strong>space</strong> to continue.</p>",
+      "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer.</p>",
     choices: [32]
   };
 
   var vaast_instructions_2 = {
     type: "html-keyboard-response",
     stimulus:
-      "<h1 class ='custom-title'>Video Game Task</h1>" +
-      "<p class='instructions'>Words will appear in this environment and your task " +
-      "will be to move forward or backward as a function of the type of word (more specific instructions following).</p>" +
-      "<p class='instructions'> To move forward or backward, you will use the following keys " +
-      "of your keyboard:</p>" +
+      "<h1 class ='custom-title'>Tâche du jeu vidéo</h1>" +
+      "<p class='instructions'>Des mots faisant référence à la sociabilité ou à la moralité apparaîtront dans cet environnement. Votre tâche " +
+      "sera d'avancer ou de reculer en fonction du type de mot (des instructions plus spécifiques vont suivre).</p>" +
+      "<p class='instructions'> Pour avancer ou reculer, vous utiliserez les touches suivantes " +
+      "de votre clavier:</p>" +
       "<p class='instructions'><center>" +
         "<img src = 'media/keyboard-vaastt.png'>" +
       "</center></p>" +
-      "<p class = 'continue-instructions'>Press <strong>space</strong> to continue.</p>",
+      "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer.</p>",
     choices: [32]
   };
 
   var vaast_instructions_3 = {
     type: "html-keyboard-response",
     stimulus:
-      "<h1 class ='custom-title'>Video Game Task</h1>" +
-      "<p class='instructions'>At the beginning of each trial, you will see the 'O' symbol. This symbol " +
-      "indicates that you have to press the <b>START key</b> (namely the <b>D key</b>) to start the trial.</p>" +
-      "<p class='instructions'>Then, you will see a fixation cross (+) at the center of the screen, followed " +
-      "by a word.</p>" +
-      "<p class='instructions'>Your task is to move forward or backward by pressing the <b>'move forward'</b> " +
-      "(the <b>E key</b>) or the <b>'move backward'</b> (the <b>C key</b>) key <strong>as fast as possible</strong>.</p>" +
-      "<p class='instructions'>For all of these actions, please only use the index of your dominant hand.</p>" +
-      "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
+      "<h1 class ='custom-title'>Tâche du jeu vidéo</h1>" +
+      "<p class='instructions'>Au début de chaque essai, vous verrez le symbole 'O'. Ce symbole " +
+      "indique que vous devez appuyer sur la touche <b>DEPART</b> (la touche <b>D</b> du clavier) pour démarrer l'essai.</p>" +
+      "<p class='instructions'>Ensuite, vous verrez une croix de fixation (+) au centre de l'écran, suivie " +
+      "d'un mot.</p>" +
+      "<p class='instructions'>Votre tâche sera d'avancer ou de reculer en appuyant sur la touche <b>'avancer'</b> " +
+      "(la touche <b>E</b> du clavier) ou sur la touche <b>'reculer'</b> (la touche <b>C</b> du clavier) <strong>aussi rapidement que possible</strong>.</p>" +
+      "<p class='instructions'>Pour toutes ces actions, veuillez utiliser uniquement l'index de votre main dominante.</p>" +
+      "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer.</p>",
     choices: [32]
   };
 
   var vaast_instructions_training_block_1 = {
       type : "html-keyboard-response",
       stimulus:
-        "<h1 class ='custom-title'>Video Game Task: Block 1/4</h1>" +
-        "<p class='instructions'><center><strong>INSTRUCTION FOR THIS FIRST BLOCK</strong></center></p>" +
-        "<p class='instructions'>In this block, you have to:</p>" +
+        "<h1 class ='custom-title'>Tâche du jeu vidéo: Block 1/2</h1>" +
+        "<p class='instructions'><center><strong>INSTRUCTIONS POUR CE PREMIER BLOC</strong></center></p>" +
+        "<p class='instructions'>Dans ce bloc, vous devez :</p>" +
          "<ul class='instructions'>" +
-          "<li><strong>APPROACH " + stim_to_approach_1 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
-          "<li><strong>AVOID " + stim_to_avoid_1 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
+          "<li><strong>APPROCHER " + stim_to_approach_1 + " en appuyant sur la touche 'avancer' (la touche " + approach_key + ")</strong></li>" +
+          "<li><strong>EVITER " + stim_to_avoid_1 + " en appuyant sur la touche 'reculer' (la touche " + avoidance_key + ")</strong></li>" +
          "</ul>" +
-        "<p class='instructions'>You will start with a training phase.</p>" +
-        "<p class='instructions'><u>WARNING:</u> we will report your errors ONLY during the training phase, so " +
-        "it is important that you read carefully and memorize the instructions above.</p>" +
-        "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
+        "<p class='instructions'>Vous allez maintenant commencer par une phase d'entraînement.</p>" +
+        "<p class='instructions'><u>ATTENTION :</u> nous signalerons vos erreurs UNIQUEMENT pendant la phase d'entrainement, donc " +
+        "il est important que vous lisiez attentivement et mémorisiez les instructions ci-dessus.</p>" +
+        "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer.</p>",
       choices: [32]
   };
 
   var vaast_instructions_test_block_1 = {
       type: "html-keyboard-response",
       stimulus:
-        "<h1 class ='custom-title'>Video Game Task: Block 1/4</h1>" +
-        "<p class='instructions'>The training phase is now over.</p>" +
-        "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
-        "<p class='instructions'>As a reminder, you have to:</p>" +
+        "<h1 class ='custom-title'>Tâche du jeu vidéo: Block 1/2</h1>" +
+        "<p class='instructions'>La phase d'entrainement est maintenant terminée.</p>" +
+        "<p class='instructions'><u>ATTENTION :</u> vous n'aurez plus de message pour signaler vos erreurs.</p>" +
+        "<p class='instructions'>Pour rappel, vous devez :</p>" +
          "<ul class='instructions'>" +
-          "<li><strong>APPROACH " + stim_to_approach_1 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
-          "<li><strong>AVOID " + stim_to_avoid_1 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
+          "<li><strong>APPROCHER " + stim_to_approach_1 + " en appuyant sur la touche 'avancer' (la touche " + approach_key + ")</strong></li>" +
+          "<li><strong>EVITER " + stim_to_avoid_1 + " en appuyant sur la touche 'reculer' (la touche " + avoidance_key + ")</strong></li>" +
          "</ul>" +
-        "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
+        "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer.</p>",
     choices: [32]
   };
 
   var vaast_instructions_training_block_2 = {
-    type : "html-keyboard-response",
-    stimulus:
-      "<h1 class ='custom-title'>Video Game Task: Block 2/4</h1>" +
-      "<p class='instructions'><center><strong>INSTRUCTION FOR THIS SECOND BLOCK</strong></center></p>" +
-      "<p class='instructions'>In this block, you have to:</p>" +
-       "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_2 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_2 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
-       "</ul>" +
-      "<p class='instructions'>You will start with a training phase.</p>" +
-      "<p class='instructions'><u>WARNING:</u> we will report your errors ONLY during the training phase, so " +
-      "it is important that you read carefully and memorize the instructions above.</p>" +
-      "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
-    choices: [32]
+      type : "html-keyboard-response",
+      stimulus:
+        "<h1 class ='custom-title'>Tâche du jeu vidéo: Block 2/2</h1>" +
+        "<p class='instructions'><center><strong>INSTRUCTIONS POUR CE DEUXIEME BLOC</strong></center></p>" +
+        "<p class='instructions'>Dans ce bloc, vous devez :</p>" +
+         "<ul class='instructions'>" +
+          "<li><strong>APPROCHER " + stim_to_approach_2 + " en appuyant sur la touche 'avancer' (la touche " + approach_key + ")</strong></li>" +
+          "<li><strong>EVITER " + stim_to_avoid_2 + " en appuyant sur la touche 'reculer' (la touche " + avoidance_key + ")</strong></li>" +
+         "</ul>" +
+        "<p class='instructions'>Vous allez maintenant commencer par une phase d'entraînement.</p>" +
+        "<p class='instructions'><u>ATTENTION :</u> nous signalerons vos erreurs UNIQUEMENT pendant la phase d'entrainement, donc " +
+        "il est important que vous lisiez attentivement et mémorisiez les instructions ci-dessus.</p>" +
+        "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer.</p>",
+      choices: [32]
   };
 
   var vaast_instructions_test_block_2 = {
       type: "html-keyboard-response",
       stimulus:
-        "<h1 class ='custom-title'>Video Game Task: Block 2/4</h1>" +
-        "<p class='instructions'>The training phase is now over.</p>" +
-        "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
-        "<p class='instructions'>As a reminder, you have to:</p>" +
+        "<h1 class ='custom-title'>Tâche du jeu vidéo: Block 2/2</h1>" +
+        "<p class='instructions'>La phase d'entrainement est maintenant terminée.</p>" +
+        "<p class='instructions'><u>ATTENTION :</u> vous n'aurez plus de message pour signaler vos erreurs.</p>" +
+        "<p class='instructions'>Pour rappel, vous devez :</p>" +
          "<ul class='instructions'>" +
-          "<li><strong>APPROACH " + stim_to_approach_2 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
-          "<li><strong>AVOID " + stim_to_avoid_2 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
+          "<li><strong>APPROCHER " + stim_to_approach_2 + " en appuyant sur la touche 'avancer' (la touche " + approach_key + ")</strong></li>" +
+          "<li><strong>EVITER " + stim_to_avoid_2 + " en appuyant sur la touche 'reculer' (la touche " + avoidance_key + ")</strong></li>" +
          "</ul>" +
-        "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
+        "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer.</p>",
     choices: [32]
   };
 
-  var vaast_instructions_training_block_3 = {
-    type : "html-keyboard-response",
-    stimulus:
-      "<h1 class ='custom-title'>Video Game Task: Block 3/4</h1>" +
-      "<p class='instructions'><center><strong>INSTRUCTION FOR THIS THIRD BLOCK</strong></center></p>" +
-      "<p class='instructions'>In this block, you have to:</p>" +
-       "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_3 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_3 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
-       "</ul>" +
-      "<p class='instructions'>You will start with a training phase.</p>" +
-      "<p class='instructions'><u>WARNING:</u> we will report your errors ONLY during the training phase, so " +
-      "it is important that you read carefully and memorize the instructions above.</p>" +
-      "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
-    choices: [32]
-  };
-
-  var vaast_instructions_test_block_3 = {
-    type: "html-keyboard-response",
-    stimulus:
-      "<h1 class ='custom-title'>Video Game Task: Block 3/4</h1>" +
-      "<p class='instructions'>The training phase is now over.</p>" +
-      "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
-      "<p class='instructions'>As a reminder, you have to:</p>" +
-       "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_3 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_3 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
-       "</ul>" +
-      "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
-  choices: [32]
-  };
-
-  var vaast_instructions_training_block_4 = {
-    type : "html-keyboard-response",
-    stimulus:
-      "<h1 class ='custom-title'>Video Game Task: Block 4/4</h1>" +
-      "<p class='instructions'><center><strong>INSTRUCTION FOR THIS LAST BLOCK</strong></center></p>" +
-      "<p class='instructions'>In this block, you have to:</p>" +
-       "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_4 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_4 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
-       "</ul>" +
-      "<p class='instructions'>You will start with a training phase.</p>" +
-      "<p class='instructions'><u>WARNING:</u> we will report your errors ONLY during the training phase, so " +
-      "it is important that you read carefully and memorize the instructions above.</p>" +
-      "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
-    choices: [32]
-  };
-
-  var vaast_instructions_test_block_4 = {
-    type: "html-keyboard-response",
-    stimulus:
-      "<h1 class ='custom-title'>Video Game Task: Block 4/4</h1>" +
-      "<p class='instructions'>The training phase is now over.</p>" +
-      "<p class='instructions'><u>WARNING:</u> you will no longer have a message to report your errors.</p>" +
-      "<p class='instructions'>As a reminder, you have to:</p>" +
-       "<ul class='instructions'>" +
-        "<li><strong>APPROACH " + stim_to_approach_4 + " by pressing the 'move forward' key (i.e., the " + approach_key + " key)</strong></li>" +
-        "<li><strong>AVOID " + stim_to_avoid_4 + " by pressing the 'move backward' key (i.e., the " + avoidance_key + " key)</strong></li>" +
-       "</ul>" +
-      "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
-  choices: [32]
-  };
 
   var vaast_instructions_4 = {
     type: "html-keyboard-response",
     stimulus:
-      "<p class='instructions'><center>Before you start:</center></p>" +
-      "<p class='instructions'>Remember that it is EXTREMELY IMPORTANT that you try to " +
-      "respond as fast and as correctly as possible.</p>" +
+      "<p class='instructions'><center>Avant de commencer :</center></p>" +
+      "<p class='instructions'>Rappelez-vous qu'il est EXTRÊMEMENT IMPORTANT que vous essayiez de " +
+      "répondre aussi rapidement et aussi correctement que possible.</p>" +
       "<br>" +
-      "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
+      "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer.</p>",
     choices: [32]
   }
 
   var vaast_instructions_5 = {
     type: "html-keyboard-response",
     stimulus:
-      "<p class='instructions'><center><strong>End of this block</strong></center></p>" +
+      "<p class='instructions'><center><strong>Fin de ce bloc. </strong></center></p>" +
       "<br>" +
-      "<p class = 'continue-instructions'><center>Press <strong>space</strong> to continue.</center></p>",
+      "<p class = 'continue-instructions'><center>Appuyez sur <strong>espace</strong> pour continuer.</center></p>",
     choices: [32]
   };
 
@@ -1104,56 +779,28 @@ var avoidance_key = "C";
 
   var vaast_training_block_1 = {
     timeline: [vaast_start, vaast_fixation, vaast_first_step_train_1, vaast_second_train_1, save_vaast_trial],
-    timeline_variables: (vaast_cond_block_1 == "approach_sociability_pos" || vaast_cond_block_1 == "approach_sociability_neg") ? vaast_stim_training_block_1_sociability : vaast_stim_training_block_1_morality,
+    timeline_variables: vaast_stim_training_block_1,
     repetitions: 1,
     randomize_order: true
   };
 
   var vaast_test_block_1 = {
     timeline: [vaast_start, vaast_fixation, vaast_first_step_1, vaast_second_step_1, save_vaast_trial],
-    timeline_variables: (vaast_cond_block_1 == "approach_sociability_pos" || vaast_cond_block_1 == "approach_sociability_neg") ? vaast_stim_block_1_sociability : vaast_stim_block_1_morality,
+    timeline_variables: vaast_stim_block_1,
     repetitions: 1,
     randomize_order: true
   };
   
   var vaast_training_block_2 = {
     timeline: [vaast_start, vaast_fixation, vaast_first_step_train_2, vaast_second_train_2, save_vaast_trial],
-    timeline_variables: (vaast_cond_block_2 == "approach_sociability_pos" || vaast_cond_block_2 == "approach_sociability_neg") ? vaast_stim_training_block_2_sociability : vaast_stim_training_block_2_morality,
+    timeline_variables: vaast_stim_training_block_2,
     repetitions: 1,
     randomize_order: true
   };
 
   var vaast_test_block_2 = {
     timeline: [vaast_start, vaast_fixation, vaast_first_step_2, vaast_second_step_2, save_vaast_trial],
-    timeline_variables: (vaast_cond_block_2 == "approach_sociability_pos" || vaast_cond_block_2 == "approach_sociability_neg") ? vaast_stim_block_2_sociability : vaast_stim_block_2_morality,
-    repetitions: 1,
-    randomize_order: true
-  };
-
-  var vaast_training_block_3 = {
-    timeline: [vaast_start, vaast_fixation, vaast_first_step_train_3, vaast_second_train_3, save_vaast_trial],
-    timeline_variables: (vaast_cond_block_3 == "approach_sociability_pos" || vaast_cond_block_3 == "approach_sociability_neg") ? vaast_stim_training_block_3_sociability : vaast_stim_training_block_3_morality,
-    repetitions: 1,
-    randomize_order: true
-  };
-
-  var vaast_test_block_3 = {
-    timeline: [vaast_start, vaast_fixation, vaast_first_step_3, vaast_second_step_3, save_vaast_trial],
-    timeline_variables: (vaast_cond_block_3 == "approach_sociability_pos" || vaast_cond_block_3 == "approach_sociability_neg") ? vaast_stim_block_3_sociability : vaast_stim_block_3_morality,
-    repetitions: 1,
-    randomize_order: true
-  };
-
-  var vaast_training_block_4 = {
-    timeline: [vaast_start, vaast_fixation, vaast_first_step_train_4, vaast_second_train_4, save_vaast_trial],
-    timeline_variables: (vaast_cond_block_4 == "approach_sociability_pos" || vaast_cond_block_4 == "approach_sociability_neg") ? vaast_stim_training_block_4_sociability : vaast_stim_training_block_4_morality,
-    repetitions: 1,
-    randomize_order: true
-  };
-
-  var vaast_test_block_4 = {
-    timeline: [vaast_start, vaast_fixation, vaast_first_step_4, vaast_second_step_4, save_vaast_trial],
-    timeline_variables: (vaast_cond_block_4 == "approach_sociability_pos" || vaast_cond_block_4 == "approach_sociability_neg") ? vaast_stim_block_4_sociability : vaast_stim_block_4_morality,
+    timeline_variables: vaast_stim_block_2,
     repetitions: 1,
     randomize_order: true
   };
@@ -1171,22 +818,22 @@ var avoidance_key = "C";
   var extra_information = {
     type: 'html-keyboard-response',
     stimulus:
-      "<p class='instructions'>The study is almost finished. Now, you have to answer a few questions.</p>" +
-      "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
+      "<p class='instructions'>L'étude est presque terminée. Maintenant, vous devez répondre à quelques questions.</p>" +
+      "<p class='continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer.</p>",
     choices: [32]
   };
 
   var extra_information_2 = {
     timeline: [{
       type: 'survey-text',
-      questions: [{prompt: "What is your age?"}],
-      button_label: "Submit",
+      questions: [{prompt: "Merci d'indiquer votre âge :"}],
+      button_label: "OK",
     }],
     loop_function: function(data) {
       var extra_information_2 = data.values()[0].responses;
       var extra_information_2 = JSON.parse(extra_information_2).Q0;
       if (extra_information_2 == "") {
-        alert("Please enter you age!");
+        alert("Veuillez répondre !");
         return true;
       }
     },
@@ -1199,38 +846,30 @@ var avoidance_key = "C";
 
   var extra_information_3 = {
     type: 'survey-multi-choice',
-    questions: [{prompt: "What is your sex?", options: ["&nbspMale", "&nbspFemale", "&nbspOther"], required: true, horizontal: true}],
-    button_label: "Submit"
+    questions: [{prompt: "Quel est votre genre ?", options: ["&nbspHomme", "&nbspFemme", "&nbspAutre"], required: true, horizontal: true}],
+    button_label: "OK"
   }
 
   var extra_information_4 = {
     type: 'survey-multi-choice',
-    questions: [{prompt: "How well do you speak english?",
-                 options: ["&nbspFluently", "&nbspVery good", "&nbspGood", "&nbspAverage", "&nbspBad", "&nbspVery bad"],
+    questions: [{prompt: "Quel est votre niveau de français ?",
+                 options: ["&nbspLangue maternelle", "&nbspTrès bon", "&nbspBon", "&nbspMoyen", "&nbspMauvais", "&nbspTrès mauvais"],
                  required: true, horizontal: false}],
-    button_label: "Submit"
+    button_label: "OK"
   }
 
   var extra_information_5 = {
     type: 'survey-multi-choice',
-    questions: [{prompt: "What is your socioeconomic status?",
-                 options: ["&nbspVery low", "&nbspLow", "&nbspMedium", "&nbspHigh", "&nbspVery high"],
+    questions: [{prompt: "En quelle année d'étude êtes-vous?",
+                 options: ["&nbspBachelier 1", "&nbspBachelier 2", "&nbspBachelier 3", "&nbspMaster 1", "&nbspMaster 2"],
                  required: true, horizontal: false}],
-    button_label: "Submit"
+    button_label: "OK"
   }
 
   var extra_information_6 = {
-    type: 'survey-multi-choice',
-    questions: [{prompt: "What is your highest level of education?",
-                 options: ["&nbspDid not complete high school", "&nbspHigh school/GED", "&nbspSome college", "&nbspBachelor's degree", "&nbspMaster's degree", "&nbspAdvanced graduate work or Ph.D."],
-                 required: true, horizontal: false}],
-    button_label: "Submit"
-  }
-
-  var extra_information_7 = {
     type: 'survey-text',
-    questions: [{prompt: "Do you have any remarks about this study? [Optional]"}],
-    button_label: "Submit"
+    questions: [{prompt: "Avez-vous des remarques sur cette étude ? [Optionnel]"}],
+    button_label: "OK"
   }
 
   // end insctruction ---------------------------------------------------------------------
@@ -1238,27 +877,19 @@ var avoidance_key = "C";
   var ending = {
     type: "html-keyboard-response",
     stimulus:
-      "<p class='instructions'>You are now finished with this study.<p>" +
-      "<p class='instructions'>In this study, we were interested in the measure of " +
-      "approach and avoidance tendencies. Research show that individuals are generally " +
-      "faster to approach positive stimuli and to avoid negative stimuli (rather than the reverse). </p>" +
-      "<p class='instructions'> Here, we wanted to see if this effect varied as a function of whether the words referred to " +
-      "sociability or morality. </p>" +
-      "<p class='instructions'>For more information to this topic, please email " +
+      "<p class='instructions'>Vous avez maintenant terminé l'étude.<p>" +
+      "<p class='instructions'>Nous allons maintenant vous donner un peu plus d'information sur le but de l'étude. " +
+      "Cette étude avait pour but de mesurer vos tendances comportementales d'approche et d'évitement envers les mots " +
+      "qui étaient présentés à l'écran. Notre hypothèse est que les individus sont généralement plus rapides pour approcher "+
+      "des mots positifs et pour éviter des mots négatifs plutôt que pour faire l'inverse (approcher des mots négatifs et éviter "+
+      "des mots positifs). Par ailleurs, nous voulons voir si cet effet varie en fonction du type de mot utilisé, à savoir "+
+      "si le mot renvoie à de la sociabilité ou à de la moralité. </p>" +
+      "<p class='instructions'>Pour plus d'information, n'hésitez pas à me contacter par email : " +
       "julien.barbedor@uclouvain.be</p>" +
-      "<p class = 'continue-instructions'>Press <strong>space</strong> to continue.</p>",
+      "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer.</p>",
     choices: [32]
   };
 
-  var ending_2 = {
-    type: "html-keyboard-response",
-    trial_duration: 2000,
-    stimulus:
-      "<p class='instructions'>You will now be redirected to Prolific Academic's website " +
-      "within seconds.<p>" +
-      "<p class='instructions'>If you are not redirected, please click <a href='https://app.prolific.ac/submissions/complete?cc=MEMHX5XQ'>here</a>.<p>",
-    choices: jsPsych.NO_KEYS
-  };
   // procedure ----------------------------------------------------------------------------
   // Initialize timeline ------------------------------------------------------------------
   var timeline = [];
@@ -1291,20 +922,7 @@ var avoidance_key = "C";
                 vaast_instructions_4,
                 vaast_training_block_2,
                 vaast_instructions_test_block_2,
-                vaast_test_block_2,
-                vaast_instructions_5,
-                vaast_instructions_training_block_3,
-                vaast_instructions_4,
-                vaast_training_block_3,
-                vaast_instructions_test_block_3,
-                vaast_test_block_3,
-                vaast_instructions_5,
-                vaast_instructions_training_block_4,
-                vaast_instructions_4,
-                vaast_training_block_4,
-                vaast_instructions_test_block_4,
-                vaast_test_block_4,
-                vaast_instructions_5);
+                vaast_test_block_2);
 
   // vaast - end
   timeline.push(fullscreen_trial_exit,
@@ -1317,12 +935,10 @@ var avoidance_key = "C";
                 extra_information_4,
                 extra_information_5,
                 extra_information_6,
-                extra_information_7,
                 save_extra);
 
   // ending
-  timeline.push(ending,
-                ending_2);
+  timeline.push(ending);
 
   // Launch experiment --------------------------------------------------------------------
   // preloading ---------------------------------------------------------------------------
@@ -1347,7 +963,7 @@ var avoidance_key = "C";
         },
       on_finish: function() {
           saving_browser_events(completion = true);
-          window.location.href = "https://app.prolific.ac/submissions/complete?cc=MEMHX5XQ";
+          window.location.href = "https://www.google.com/";
       }
     });
   }
