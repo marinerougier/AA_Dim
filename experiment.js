@@ -999,7 +999,7 @@ var vaast_stim_block_2_soc_neg = [
   }
 
   // end insctruction ---------------------------------------------------------------------
-
+/*
   var ending = {
     type: "html-keyboard-response",
     stimulus:
@@ -1015,7 +1015,7 @@ var vaast_stim_block_2_soc_neg = [
       "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer.</p>",
     choices: [32]
   };
-
+*/
   // procedure ----------------------------------------------------------------------------
   // Initialize timeline ------------------------------------------------------------------
   var timeline = [];
@@ -1028,7 +1028,7 @@ var vaast_stim_block_2_soc_neg = [
   // fullscreen
   timeline.push(fullscreen_trial,
                 hiding_cursor);
-/*
+
   // initial instructions
   timeline.push(instructions);
 
@@ -1062,9 +1062,9 @@ var vaast_stim_block_2_soc_neg = [
                 extra_information_5,
                 extra_information_6,
                 save_extra);
-*/
+
   // ending
-  timeline.push(ending);
+  // timeline.push(ending);
 
   // Launch experiment --------------------------------------------------------------------
   // preloading ---------------------------------------------------------------------------
