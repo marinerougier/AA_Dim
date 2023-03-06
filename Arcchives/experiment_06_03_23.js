@@ -136,13 +136,6 @@ var avoidance_key = "C";
   var vaast_trial_n    = 1;
   var browser_events_n = 1;
 
-    /* Functions */
-  function flatten(arr) {
-    return arr.reduce(function (flat, toFlatten) {
-      return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
-    }, []);
-  };
-
   // VAAST --------------------------------------------------------------------------------
   // VAAST variables ----------------------------------------------------------------------
   var movement_pos_1 = undefined;
@@ -190,8 +183,7 @@ var avoidance_key = "C";
 
   // VAAST stimuli ------------------------------------------------------------------------
   
-  // LIST FOR FIRST BLOCK
-  var vaast_stim_block_1_soc_pos = [
+  var vaast_stim_block_1 = [
     {stimulus: 'sociable',      category: "sociability_pos",  movement: movement_pos_1},
     {stimulus: 'attentionné',   category: "sociability_pos",  movement: movement_pos_1},
     {stimulus: 'chaleureux',    category: "sociability_pos",  movement: movement_pos_1},
@@ -204,9 +196,6 @@ var avoidance_key = "C";
     {stimulus: 'avenant',       category: "sociability_pos",  movement: movement_pos_1},
     {stimulus: 'gentil',        category: "sociability_pos",  movement: movement_pos_1},
     {stimulus: 'accessible',    category: "sociability_pos",  movement: movement_pos_1},
-  ];
-
-var vaast_stim_block_1_soc_neg = [
     {stimulus: 'froid',         category: "sociability_neg",  movement: movement_neg_1},
     {stimulus: 'hautain',       category: "sociability_neg",  movement: movement_neg_1},
     {stimulus: 'désagréable',   category: "sociability_neg",  movement: movement_neg_1},
@@ -219,9 +208,6 @@ var vaast_stim_block_1_soc_neg = [
     {stimulus: 'ennuyeux',      category: "sociability_neg",  movement: movement_neg_1},
     {stimulus: 'agaçant',       category: "sociability_neg",  movement: movement_neg_1},
     {stimulus: 'réservé',       category: "sociability_neg",  movement: movement_neg_1},
-  ];
-
-  var vaast_stim_block_1_mor_pos = [
     {stimulus: 'honnête',       category: "morality_pos",  movement: movement_pos_1},
     {stimulus: 'moral',         category: "morality_pos",  movement: movement_pos_1},
     {stimulus: 'honorable',     category: "morality_pos",  movement: movement_pos_1},
@@ -234,9 +220,6 @@ var vaast_stim_block_1_soc_neg = [
     {stimulus: 'droit',         category: "morality_pos",  movement: movement_pos_1},
     {stimulus: 'respectable',   category: "morality_pos",  movement: movement_pos_1},
     {stimulus: 'vertueux',      category: "morality_pos",  movement: movement_pos_1},
-  ];
-
-  var vaast_stim_block_1_mor_neg = [
     {stimulus: 'malhonnête',    category: "morality_neg",  movement: movement_neg_1},
     {stimulus: 'déloyal',       category: "morality_neg",  movement: movement_neg_1},
     {stimulus: 'fourbe',        category: "morality_neg",  movement: movement_neg_1},
@@ -251,22 +234,23 @@ var vaast_stim_block_1_soc_neg = [
     {stimulus: 'tricheur',      category: "morality_neg",  movement: movement_neg_1},
   ];
 
-  // Stimuli for the Test phases
-  // We merge the stimuli from the previous list 
-  var vaast_stim_block_1 = vaast_stim_block_1_soc_pos.concat(vaast_stim_block_1_soc_neg).concat(vaast_stim_block_1_mor_pos).concat(vaast_stim_block_1_mor_neg)
+  var vaast_stim_training_block_1 = [
+    {stimulus: 'sociability_pos_training',  category: "sociability_pos", movement: movement_pos_1},
+    {stimulus: 'sociability_neg_training',  category: "sociability_neg", movement: movement_neg_1},
+    {stimulus: 'morality_pos_training',     category: "morality_pos", movement: movement_pos_1},
+    {stimulus: 'morality_neg_training',     category: "morality_neg", movement: movement_neg_1}
+  ];
 
-  // Stimuli for the Training (before Test)
-  // We randomly select 1 stimuli within each list
-  var vaast_stim_block_1_soc_pos_training = jsPsych.randomization.sampleWithoutReplacement(vaast_stim_block_1_soc_pos, 1);
-  var vaast_stim_block_1_soc_neg_training = jsPsych.randomization.sampleWithoutReplacement(vaast_stim_block_1_soc_neg, 1);
-  var vaast_stim_block_1_mor_pos_training = jsPsych.randomization.sampleWithoutReplacement(vaast_stim_block_1_mor_pos, 1);
-  var vaast_stim_block_1_mor_neg_training = jsPsych.randomization.sampleWithoutReplacement(vaast_stim_block_1_mor_neg, 1);
+  var test = jsPsych.randomization.sampleWithoutReplacement(vaast_stim_block_1, 4);
 
-  // We create the list for training stimuli
-  var vaast_stim_training_block_1 = vaast_stim_block_1_soc_pos_training.concat(vaast_stim_block_1_soc_neg_training).concat(vaast_stim_block_1_mor_pos_training).concat(vaast_stim_block_1_mor_neg_training)
+  var vaast_stim_training_block_2 = [
+    {stimulus: 'sociability_pos_training',  category: "sociability_pos", movement: movement_pos_2},
+    {stimulus: 'sociability_neg_training',  category: "sociability_neg", movement: movement_neg_2},
+    {stimulus: 'morality_pos_training',     category: "morality_pos", movement: movement_pos_2},
+    {stimulus: 'morality_neg_training',     category: "morality_neg", movement: movement_neg_2}
+  ];
 
- // LIST FOR SECOND BLOCK
-  var vaast_stim_block_2_soc_pos = [
+ var vaast_stim_block_2 = [
     {stimulus: 'sociable',      category: "sociability_pos",  movement: movement_pos_2},
     {stimulus: 'attentionné',   category: "sociability_pos",  movement: movement_pos_2},
     {stimulus: 'chaleureux',    category: "sociability_pos",  movement: movement_pos_2},
@@ -279,9 +263,6 @@ var vaast_stim_block_1_soc_neg = [
     {stimulus: 'avenant',       category: "sociability_pos",  movement: movement_pos_2},
     {stimulus: 'gentil',        category: "sociability_pos",  movement: movement_pos_2},
     {stimulus: 'accessible',    category: "sociability_pos",  movement: movement_pos_2},
-  ];
-
-var vaast_stim_block_2_soc_neg = [
     {stimulus: 'froid',         category: "sociability_neg",  movement: movement_neg_2},
     {stimulus: 'hautain',       category: "sociability_neg",  movement: movement_neg_2},
     {stimulus: 'désagréable',   category: "sociability_neg",  movement: movement_neg_2},
@@ -294,9 +275,6 @@ var vaast_stim_block_2_soc_neg = [
     {stimulus: 'ennuyeux',      category: "sociability_neg",  movement: movement_neg_2},
     {stimulus: 'agaçant',       category: "sociability_neg",  movement: movement_neg_2},
     {stimulus: 'réservé',       category: "sociability_neg",  movement: movement_neg_2},
-  ];
-
-  var vaast_stim_block_2_mor_pos = [
     {stimulus: 'honnête',       category: "morality_pos",  movement: movement_pos_2},
     {stimulus: 'moral',         category: "morality_pos",  movement: movement_pos_2},
     {stimulus: 'honorable',     category: "morality_pos",  movement: movement_pos_2},
@@ -309,9 +287,6 @@ var vaast_stim_block_2_soc_neg = [
     {stimulus: 'droit',         category: "morality_pos",  movement: movement_pos_2},
     {stimulus: 'respectable',   category: "morality_pos",  movement: movement_pos_2},
     {stimulus: 'vertueux',      category: "morality_pos",  movement: movement_pos_2},
-  ];
-
-  var vaast_stim_block_2_mor_neg = [
     {stimulus: 'malhonnête',    category: "morality_neg",  movement: movement_neg_2},
     {stimulus: 'déloyal',       category: "morality_neg",  movement: movement_neg_2},
     {stimulus: 'fourbe',        category: "morality_neg",  movement: movement_neg_2},
@@ -325,20 +300,6 @@ var vaast_stim_block_2_soc_neg = [
     {stimulus: 'véreux',        category: "morality_neg",  movement: movement_neg_2},
     {stimulus: 'tricheur',      category: "morality_neg",  movement: movement_neg_2},
   ];
-
-  // Stimuli for the Test phases
-  // We merge the stimuli from the previous list 
-  var vaast_stim_block_2 = vaast_stim_block_2_soc_pos.concat(vaast_stim_block_2_soc_neg).concat(vaast_stim_block_2_mor_pos).concat(vaast_stim_block_2_mor_neg)
-
-  // Stimuli for the Training (before Test)
-  // We randomly select 1 stimuli within each list
-  var vaast_stim_block_2_soc_pos_training = jsPsych.randomization.sampleWithoutReplacement(vaast_stim_block_2_soc_pos, 1);
-  var vaast_stim_block_2_soc_neg_training = jsPsych.randomization.sampleWithoutReplacement(vaast_stim_block_2_soc_neg, 1);
-  var vaast_stim_block_2_mor_pos_training = jsPsych.randomization.sampleWithoutReplacement(vaast_stim_block_2_mor_pos, 1);
-  var vaast_stim_block_2_mor_neg_training = jsPsych.randomization.sampleWithoutReplacement(vaast_stim_block_2_mor_neg, 1);
-
-  // We create the list for training stimuli
-  var vaast_stim_training_block_2 = vaast_stim_block_2_soc_pos_training.concat(vaast_stim_block_2_soc_neg_training).concat(vaast_stim_block_2_mor_pos_training).concat(vaast_stim_block_2_mor_neg_training)
 
 
   // vaast background images --------------------------------------------------------------
@@ -516,13 +477,13 @@ var vaast_stim_block_2_soc_neg = [
   // First slide --------------------------------------------------------------------------
   var instructions = {
     type: "html-keyboard-response",
-    stimulus: "<p>Vous êtes maintenant sur le point de commencer l'étude. "+
+    stimulus: "<p class='instructions'>Vous êtes maintenant sur le point de commencer l'étude. "+
     "<br><br>"+
     "Dans cette étude, vous allez effectuer une tâche de catégorisation appelée la 'tâche du jeu vidéo'. " +
-    "<br>Cette tâche est divisée en deux blocs.</p>" +
-    "<p><b>Votre tâche sera de catégoriser des mots positifs et négatifs liés "+
-    "à la sociabilité et à la moralité.</b> "+
-    "Aussi, <br>veuillez prendre quelques instants pour regarder à quelle categorie appartient chaque mot : </p>" +
+    "Cette tâche est divisée en deux blocs.</p>" +
+    "<p class='instructions'>Votre tâche sera de catégoriser des mots positifs et négatifs liés "+
+    "à la sociabilité et à la moralité. "+
+    "Veuillez prendre quelques instants pour regarder à quelle categorie appartient chaque mot : </p>" +
     "<table>" +
       "<tr>" +
         "<th width='200px'><p font:80> <br><br></p></th>" +
@@ -532,13 +493,13 @@ var vaast_stim_block_2_soc_neg = [
       "<br>" +
       "<tr>" +
         "<td><b>Mots reliés à <br>la sociabilité :</b></td>" +
-        "<td align='center'>sociable, attentionné, chaleureux, sympathique, cordial, agréable, accueillant, plaisant, aimable, avenant, gentil, accessible</td>"+
-        "<td align='center'>froid, hautain, désagréable, hostile, déplaisant, insensible, distant, pénible, mauvais, ennuyeux, agaçant, réservé</td>"+
+        "<td align='center'>mot1, &nbsp&nbspmot2, <br>&nbsp&nbspmot3</td>"+
+        "<td align='center'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmot1, &nbsp&nbspmot2, <br>&nbsp&nbspmot3</td>"+
       "</tr>" +
       "<tr>" +
         "<td><br><b>Mots reliés à<br> la moralité :</b></td>" +        
-        "<td align='center'>honnête, moral, honorable, sincère, fiable, intègre, juste, loyal, fidèle, droit, respectable, vertueux</td>"+
-        "<td align='center'>malhonnête, déloyal, fourbe, perfide, corrompu, immoral, infidèle, sournois, faux, hypocrite, véreux, tricheur</td>"+
+        "<td align='center'>mot1, &nbsp&nbspmot2, <br>&nbsp&nbspmot3</td>"+
+        "<td align='center'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmot1, &nbsp&nbspmot2, <br>&nbsp&nbspmot3</td>"+
       "</tr>" +
     "</table>" +
     "<br>" +
@@ -910,7 +871,7 @@ var vaast_stim_block_2_soc_neg = [
   var vaast_training_block_1 = {
     timeline: [vaast_start, vaast_fixation, vaast_first_step_train_1, vaast_second_train_1, save_vaast_trial],
     timeline_variables: vaast_stim_training_block_1,
-    repetitions: 2,
+    repetitions: 1,
     randomize_order: true
   };
 
@@ -924,7 +885,7 @@ var vaast_stim_block_2_soc_neg = [
   var vaast_training_block_2 = {
     timeline: [vaast_start, vaast_fixation, vaast_first_step_train_2, vaast_second_train_2, save_vaast_trial],
     timeline_variables: vaast_stim_training_block_2,
-    repetitions: 2,
+    repetitions: 1,
     randomize_order: true
   };
 
