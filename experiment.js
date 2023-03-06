@@ -360,15 +360,16 @@ var avoidance_key = "C";
     type: "html-button-response",
     stimulus:
     "<h1 class ='custom-title'> Consentement éclairé </h1>" +
-      "<p class='instructions'>En cliquant ci-dessous pour commencer l'étude, vous reconnaissez que :</p>" +
-        "<ul class='instructions'>" +
-          "<li>You know you can stop your participation at any time, without having to justify yourself. " +
-          "However, keep in mind that you have to complete the whole study in order to be paid.</li>" +
-          "<li>You know you can contact our team for any questions or dissatisfaction related to your " +
-          "participation in the research via the following email address: julien.barbedor@uclouvain.be.</li>" +
-          "<li>You know the data collected will be strictly confidential and it will be impossible for " +
-          "any unauthorized third party to identify you.</li>" +
-        "</ul>" +
+      "<p class='instructions'>Nous vous remercions chaleureusement de l'intérêt que vous portez à cette étude, "+
+      "menée en collaboration par plusieurs chercheurs de l'UCLouvain. Sans vous, nous ne pourrions pas mener à bien nos études. "+
+      "Avant de commencer, veuillez couper votre téléphone afin de pouvoir vous concentrer sur l'étude </p>" +
+        "<p class='instructions'>Votre consentement éclairé est requis pour cette étude. La participation à cette recherche est volontaire "+
+        "et ne comporte aucun risque pour vous (au-delà de ceux de la vie quitidienne). "+
+      "L'objectif de cette étude est de mieux comprendre les processus de catégorisation. La durée de l'étude est de 10 minutes environ. </p>" +
+      "<p class='instructions'>Toutes les données receuillies par cette étude sont confidentielles. Vos réponses resteront privées et nous "+
+        "n'inclurons aucune information qui permettraient de vous identifier dans les rapports que nous pourrions publier. "+
+      "En donnant votre consentement, vous nous autorisez à partager les données anonymisées de cette étude à d'autres scientifiques. "+
+      "Aussi, veuillez ne pas include d'information qui pourrait vous identifier dans les questions ouvertes. </p>" +
       "<p class='instructions'>En cliquant sur le bouton \"Je confirme\", vous accordez votre consentement éclairé pour " +
       "participer à cette recherche.</p>",
     choices: ['Je confirme']
