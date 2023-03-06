@@ -129,8 +129,8 @@ var avoidance_key = "C";
    } 
 
   // prolific variables
-  var prolific_id = jsPsych.data.getURLVariable('prolific_id');
-  if(prolific_id == null) {prolific_id = "999";}
+  //var prolific_id = jsPsych.data.getURLVariable('prolific_id');
+  //if(prolific_id == null) {prolific_id = "999";}
 
   // counter variables
   var vaast_trial_n    = 1;
@@ -391,7 +391,6 @@ var vaast_stim_block_2_soc_neg = [
         .ref("participant_id_AA_dim/")
         .push()
         .set({session_id: session_id,
-          	   prolific_id: prolific_id,
           	   timestamp: firebase.database.ServerValue.TIMESTAMP,
                vaast_cond_block_1: vaast_cond_block_1,
                vaast_cond_block_2: vaast_cond_block_2})
@@ -403,7 +402,6 @@ var vaast_stim_block_2_soc_neg = [
   	  .ref("vaast_trial_AA_dim/").
       push()
         .set({session_id: session_id,
-          prolific_id: prolific_id,
           timestamp: firebase.database.ServerValue.TIMESTAMP,
           vaast_cond_block_1: vaast_cond_block_1,
           vaast_cond_block_2: vaast_cond_block_2,
@@ -415,7 +413,6 @@ var vaast_stim_block_2_soc_neg = [
   	 .ref("extra_info_AA_dim/")
      .push()
   	 .set({session_id: session_id,
-  	 	   prolific_id: prolific_id,
          timestamp: firebase.database.ServerValue.TIMESTAMP,
          vaast_cond_block_1: vaast_cond_block_1,
          vaast_cond_block_2: vaast_cond_block_2,
@@ -428,7 +425,6 @@ var vaast_stim_block_2_soc_neg = [
   	 .ref("browser_event_AA_dim/")
      .push()
   	 .set({session_id: session_id,
-  	 	   prolific_id: prolific_id,
          timestamp: firebase.database.ServerValue.TIMESTAMP,
          vaast_cond_block_1: vaast_cond_block_1,
          vaast_cond_block_2: vaast_cond_block_2,
@@ -594,7 +590,7 @@ var vaast_stim_block_2_soc_neg = [
   var vaast_instructions_training_block_1 = {
       type : "html-keyboard-response",
       stimulus:
-        "<h1 class ='custom-title'>Tâche du jeu vidéo: Block 1/2</h1>" +
+        "<h1 class ='custom-title'>Tâche du jeu vidéo: Bloc 1/2</h1>" +
         "<p class='instructions'><center><strong>INSTRUCTIONS POUR CE PREMIER BLOC</strong></center></p>" +
         "<p class='instructions'>Dans ce bloc, vous devez :</p>" +
          "<ul class='instructions'>" +
@@ -611,7 +607,7 @@ var vaast_stim_block_2_soc_neg = [
   var vaast_instructions_test_block_1 = {
       type: "html-keyboard-response",
       stimulus:
-        "<h1 class ='custom-title'>Tâche du jeu vidéo: Block 1/2</h1>" +
+        "<h1 class ='custom-title'>Tâche du jeu vidéo: Bloc 1/2</h1>" +
         "<p class='instructions'>La phase d'entrainement est maintenant terminée.</p>" +
         "<p class='instructions'><u>ATTENTION :</u> vous n'aurez plus de message pour signaler vos erreurs.</p>" +
         "<p class='instructions'>Pour rappel, vous devez :</p>" +
@@ -626,7 +622,7 @@ var vaast_stim_block_2_soc_neg = [
   var vaast_instructions_training_block_2 = {
       type : "html-keyboard-response",
       stimulus:
-        "<h1 class ='custom-title'>Tâche du jeu vidéo: Block 2/2</h1>" +
+        "<h1 class ='custom-title'>Tâche du jeu vidéo: Bloc 2/2</h1>" +
         "<p class='instructions'><center><strong>INSTRUCTIONS POUR CE DEUXIEME BLOC</strong></center></p>" +
         "<p class='instructions'>Dans ce bloc, vous devez :</p>" +
          "<ul class='instructions'>" +
@@ -643,7 +639,7 @@ var vaast_stim_block_2_soc_neg = [
   var vaast_instructions_test_block_2 = {
       type: "html-keyboard-response",
       stimulus:
-        "<h1 class ='custom-title'>Tâche du jeu vidéo: Block 2/2</h1>" +
+        "<h1 class ='custom-title'>Tâche du jeu vidéo: Bloc 2/2</h1>" +
         "<p class='instructions'>La phase d'entrainement est maintenant terminée.</p>" +
         "<p class='instructions'><u>ATTENTION :</u> vous n'aurez plus de message pour signaler vos erreurs.</p>" +
         "<p class='instructions'>Pour rappel, vous devez :</p>" +
@@ -1032,7 +1028,7 @@ var vaast_stim_block_2_soc_neg = [
   // fullscreen
   timeline.push(fullscreen_trial,
                 hiding_cursor);
-
+/*
   // initial instructions
   timeline.push(instructions);
 
@@ -1066,7 +1062,7 @@ var vaast_stim_block_2_soc_neg = [
                 extra_information_5,
                 extra_information_6,
                 save_extra);
-
+*/
   // ending
   timeline.push(ending);
 
@@ -1093,7 +1089,7 @@ var vaast_stim_block_2_soc_neg = [
         },
       on_finish: function() {
           saving_browser_events(completion = true);
-          window.location.href = "https://www.google.com/";
+          window.location.href = "https://uclpsychology.co1.qualtrics.com/jfe/form/SV_8ieU2dQ0h4ZVitM?session_id=" + session_id;
       }
     });
   }
