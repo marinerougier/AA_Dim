@@ -999,23 +999,15 @@ var vaast_stim_block_2_soc_neg = [
   }
 
   // end insctruction ---------------------------------------------------------------------
-/*
+
   var ending = {
     type: "html-keyboard-response",
     stimulus:
-      "<p class='instructions'>Vous avez maintenant terminé l'étude.<p>" +
-      "<p class='instructions'>Nous allons maintenant vous donner un peu plus d'information sur le but de l'étude. " +
-      "Cette étude avait pour but de mesurer vos tendances comportementales d'approche et d'évitement envers les mots " +
-      "qui étaient présentés à l'écran. Notre hypothèse est que les individus sont généralement plus rapides pour approcher "+
-      "des mots positifs et pour éviter des mots négatifs plutôt que pour faire l'inverse (approcher des mots négatifs et éviter "+
-      "des mots positifs). Par ailleurs, nous voulons voir si cet effet varie en fonction du type de mot utilisé, à savoir "+
-      "si le mot renvoie à de la sociabilité ou à de la moralité. </p>" +
-      "<p class='instructions'>Pour plus d'information, n'hésitez pas à me contacter par email : " +
-      "julien.barbedor@uclouvain.be</p>" +
+      "<p class='instructions'>Vous allez maintenant terminer l'étude avec un court questionnaire. </p>" +
       "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer.</p>",
     choices: [32]
   };
-*/
+
   // procedure ----------------------------------------------------------------------------
   // Initialize timeline ------------------------------------------------------------------
   var timeline = [];
@@ -1064,7 +1056,7 @@ var vaast_stim_block_2_soc_neg = [
                 save_extra);
 
   // ending
-  // timeline.push(ending);
+  timeline.push(ending);
 
   // Launch experiment --------------------------------------------------------------------
   // preloading ---------------------------------------------------------------------------
