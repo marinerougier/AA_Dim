@@ -907,28 +907,52 @@ var vaast_stim_block_2_soc_neg = [
     timeline: [vaast_start, vaast_fixation, vaast_first_step_train_1, vaast_second_train_1, save_vaast_trial],
     timeline_variables: vaast_stim_training_block_1,
     repetitions: 2,
-    randomize_order: true
+    randomize_order: true,
+    data: {
+    phase:    "training_block1",
+    stimulus: jsPsych.timelineVariable('stimulus'),
+    movement: jsPsych.timelineVariable('movement'),
+    category:    jsPsych.timelineVariable('category'),
+  }
   };
 
   var vaast_test_block_1 = {
     timeline: [vaast_start, vaast_fixation, vaast_first_step_1, vaast_second_step_1, save_vaast_trial],
     timeline_variables: vaast_stim_block_1,
     repetitions: 1,
-    randomize_order: true
+    randomize_order: true,
+    data: {
+    phase:    "test_block1",
+    stimulus: jsPsych.timelineVariable('stimulus'),
+    movement: jsPsych.timelineVariable('movement'),
+    category:    jsPsych.timelineVariable('category'),
+  }
   };
   
   var vaast_training_block_2 = {
     timeline: [vaast_start, vaast_fixation, vaast_first_step_train_2, vaast_second_train_2, save_vaast_trial],
     timeline_variables: vaast_stim_training_block_2,
     repetitions: 2,
-    randomize_order: true
+    randomize_order: true,
+    data: {
+    phase:    "training_block2",
+    stimulus: jsPsych.timelineVariable('stimulus'),
+    movement: jsPsych.timelineVariable('movement'),
+    category:    jsPsych.timelineVariable('category'),
+  }
   };
 
   var vaast_test_block_2 = {
     timeline: [vaast_start, vaast_fixation, vaast_first_step_2, vaast_second_step_2, save_vaast_trial],
     timeline_variables: vaast_stim_block_2,
     repetitions: 1,
-    randomize_order: true
+    randomize_order: true,
+    data: {
+    phase:    "test_block2",
+    stimulus: jsPsych.timelineVariable('stimulus'),
+    movement: jsPsych.timelineVariable('movement'),
+    category:    jsPsych.timelineVariable('category'),
+  }
   };
 
   
@@ -949,34 +973,34 @@ var vaast_stim_block_2_soc_neg = [
     choices: [32]
   };
 
-  var extra_information_2 = {
+  var extra_information_1 = {
     timeline: [{
       type: 'survey-text',
       questions: [{prompt: "Merci d'indiquer votre âge :"}],
       button_label: "OK",
     }],
     loop_function: function(data) {
-      var extra_information_2 = data.values()[0].responses;
-      var extra_information_2 = JSON.parse(extra_information_2).Q0;
-      if (extra_information_2 == "") {
+      var extra_information_1 = data.values()[0].responses;
+      var extra_information_1 = JSON.parse(extra_information_1).Q0;
+      if (extra_information_1 == "") {
         alert("Veuillez répondre !");
         return true;
       }
     },
     on_finish: function(data) {
       jsPsych.data.addProperties({
-        extra_information_2: JSON.parse(data.responses)["Q0"],
+        extra_information_1: JSON.parse(data.responses)["Q0"],
       });
     }
   }
 
-  var extra_information_3 = {
+  var extra_information_2 = {
     type: 'survey-multi-choice',
     questions: [{prompt: "Quel est votre genre ?", options: ["&nbspHomme", "&nbspFemme", "&nbspAutre"], required: true, horizontal: true}],
     button_label: "OK"
   }
 
-  var extra_information_4 = {
+  var extra_information_3 = {
     type: 'survey-multi-choice',
     questions: [{prompt: "Quel est votre niveau de français ?",
                  options: ["&nbspLangue maternelle", "&nbspTrès bon", "&nbspBon", "&nbspMoyen", "&nbspMauvais", "&nbspTrès mauvais"],
@@ -984,7 +1008,7 @@ var vaast_stim_block_2_soc_neg = [
     button_label: "OK"
   }
 
-  var extra_information_5 = {
+  var extra_information_4 = {
     type: 'survey-multi-choice',
     questions: [{prompt: "En quelle année d'étude êtes-vous?",
                  options: ["&nbspBachelier 1", "&nbspBachelier 2", "&nbspBachelier 3", "&nbspMaster 1", "&nbspMaster 2"],
@@ -992,7 +1016,7 @@ var vaast_stim_block_2_soc_neg = [
     button_label: "OK"
   }
 
-  var extra_information_6 = {
+  var extra_information_5 = {
     type: 'survey-text',
     questions: [{prompt: "Avez-vous des remarques sur cette étude ? [Optionnel]"}],
     button_label: "OK"
@@ -1032,15 +1056,16 @@ var vaast_stim_block_2_soc_neg = [
  // vaast - blocks
   timeline.push(vaast_instructions_training_block_1,
                 vaast_instructions_4,
-                vaast_training_block_1,
+                //vaast_training_block_1,
                 vaast_instructions_test_block_1,
-                vaast_test_block_1,
+                //vaast_test_block_1,
                 vaast_instructions_5,
                 vaast_instructions_training_block_2,
                 vaast_instructions_4,
-                vaast_training_block_2,
+                //vaast_training_block_2,
                 vaast_instructions_test_block_2,
-                vaast_test_block_2);
+               // vaast_test_block_2
+               );
 
   // vaast - end
   timeline.push(fullscreen_trial_exit,
@@ -1048,11 +1073,11 @@ var vaast_stim_block_2_soc_neg = [
 
  // demographic questions
   timeline.push(extra_information,
+                extra_information_1,
                 extra_information_2,
                 extra_information_3,
                 extra_information_4,
                 extra_information_5,
-                extra_information_6,
                 save_extra);
 
   // ending
