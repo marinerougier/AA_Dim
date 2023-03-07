@@ -1056,15 +1056,15 @@ var vaast_stim_block_2_soc_neg = [
  // vaast - blocks
   timeline.push(vaast_instructions_training_block_1,
                 vaast_instructions_4,
-                //vaast_training_block_1,
+                vaast_training_block_1,
                 vaast_instructions_test_block_1,
-                //vaast_test_block_1,
+                vaast_test_block_1,
                 vaast_instructions_5,
                 vaast_instructions_training_block_2,
                 vaast_instructions_4,
-                //vaast_training_block_2,
+                vaast_training_block_2,
                 vaast_instructions_test_block_2,
-               // vaast_test_block_2
+                vaast_test_block_2
                );
 
   // vaast - end
