@@ -493,6 +493,7 @@ var vaast_stim_block_2_soc_neg = [
       "L'objectif de cette étude est de mieux comprendre les processus de catégorisation. La durée de l'étude est de 10 minutes environ. </p>" +
       "<p class='instructions'>Toutes les données receuillies par cette étude sont confidentielles. Vos réponses resteront privées et nous "+
         "n'inclurons aucune information qui permettraient de vous identifier dans les rapports que nous pourrions publier. "+
+        "Nous vous rappelons également que si vous vous retirez de l'étude, vous conserverez le droit de réaliser le travail nécessaire à l’obtention du crédit attribué pour cette participation. "+
       "En donnant votre consentement, vous nous autorisez à partager les données anonymisées de cette étude à d'autres scientifiques. "+
       "Aussi, veuillez ne pas include d'information qui pourrait vous identifier dans les questions ouvertes. </p>" +
       "<p class='instructions'>En cliquant sur le bouton \"Je confirme\", vous accordez votre consentement éclairé pour " +
